@@ -121,24 +121,25 @@
     <!-- ==================== 한국어 ==================== -->
     <div id="section-ko" class="section-ko">
       <h1>개인정보처리방침</h1>
-      <p class="subtitle">TOPIK Korean (한국어 학습) | 시행일: 2026년 6월 24일 | 버전 1.0</p>
+      <p class="subtitle">TOPIK Korean (한국어 학습) | 시행일: 2026년 9월 27일 | 버전 1.1</p>
 
       <p>RedMoon Studio(이하 "회사")는 「개인정보 보호법」 등 관련 법령에 따라 이용자의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리하기 위하여 다음과 같이 개인정보처리방침을 수립·공개합니다.</p>
 
       <div class="info-box">
-        <strong>한 줄 요약:</strong> TOPIK Korean은 회원가입이 없으며, 회사가 직접 수집하는 개인정보는 없습니다. 다만 앱을 무료로 제공하고 품질을 개선하기 위해 <strong>Google AdMob(광고)</strong>, <strong>Firebase Analytics(이용 통계)</strong>, <strong>Firebase Crashlytics(오류 진단)</strong>를 사용하며, 이 서비스들은 광고 식별자와 기기·이용·진단 정보를 수집할 수 있습니다. 학습 기록과 설정은 사용자의 기기에만 저장됩니다.
+        <strong>한 줄 요약:</strong> TOPIK Korean은 회원가입 없이 모든 기능을 쓸 수 있고, 학습 기록과 설정은 기본적으로 사용자의 기기에만 저장됩니다. 다른 기기에서 이어 학습하고 싶을 때만 <strong>선택적으로 구글 계정으로 로그인</strong>하면 학습 진도 등이 Google Firebase에 저장·동기화됩니다. 또한 앱을 무료로 제공하고 품질을 개선하기 위해 <strong>Google AdMob 및 Meta Audience Network(광고)</strong>, <strong>Firebase Analytics(이용 통계)</strong>, <strong>Firebase Crashlytics(오류 진단)</strong>를 사용하며, 이 서비스들은 광고 식별자와 기기·이용·진단 정보를 수집할 수 있습니다.
       </div>
 
       <h2>제1조 (수집하는 정보)</h2>
 
       <h3>1. 회사가 직접 수집하지 않는 정보</h3>
       <ul>
-        <li>이름, 이메일, 전화번호, 생년월일 등 개인식별정보</li>
+        <li>이름, 전화번호, 생년월일 등 개인식별정보 (선택 기능인 구글 로그인을 사용하는 경우에 한해 구글 계정의 이메일 주소·표시 이름·고유 ID가 처리됩니다 — 아래 3항 참조)</li>
         <li>위치 정보(GPS)</li>
         <li>연락처, 통화 기록, 사진/미디어</li>
+        <li>녹음된 음성 파일 (말하기 연습의 음성 인식은 기기의 음성 인식 서비스가 처리하며, 앱은 음성을 저장하거나 회사로 전송하지 않습니다)</li>
       </ul>
 
-      <h3>2. 기기 내부에만 저장되는 데이터 (회사로 전송되지 않음)</h3>
+      <h3>2. 기기 내부에 저장되는 데이터 (구글 로그인·동기화를 사용하지 않으면 기기 밖으로 전송되지 않음)</h3>
       <table>
         <thead><tr><th>항목</th><th>용도</th><th>저장 위치</th></tr></thead>
         <tbody>
@@ -150,13 +151,28 @@
         </tbody>
       </table>
 
-      <h3>3. 제3자 서비스(SDK)가 수집하는 정보</h3>
+      <h3>3. 선택 기능: 구글 로그인 및 다기기 동기화 (Firebase Authentication · Cloud Firestore)</h3>
+      <p>설정 화면에서 구글 계정으로 로그인한 경우에만 아래 정보가 Google Firebase에 저장됩니다. 로그인하지 않으면 전송되지 않으며, 로그아웃하면 동기화가 중단됩니다.</p>
+      <table>
+        <thead><tr><th>항목</th><th>용도</th><th>저장 위치</th></tr></thead>
+        <tbody>
+          <tr><td>구글 계정 정보 (이메일 주소, 표시 이름, 고유 ID)</td><td>로그인 및 계정 식별</td><td>Firebase Authentication</td></tr>
+          <tr><td>학습 진도·복습 기록(SRS), 즐겨찾기, 일별 학습 통계</td><td>다른 기기에서 이어 학습</td><td>Cloud Firestore</td></tr>
+          <tr><td>일부 환경설정(학습 급수, 테마, 앱 언어, 알림 등)</td><td>기기 간 설정 동일화</td><td>Cloud Firestore</td></tr>
+        </tbody>
+      </table>
+      <p>코인, 결제·이용권 상태, 광고 관련 카운터는 동기화하지 않습니다. 저장된 데이터의 삭제는 제6조를 참고하세요.</p>
+
+      <h3>4. 제3자 서비스(SDK)가 수집하는 정보</h3>
       <table>
         <thead><tr><th>서비스</th><th>수집 정보</th><th>목적</th></tr></thead>
         <tbody>
           <tr><td>Google AdMob</td><td>광고 식별자(AAID), IP 주소, 기기 정보, 광고 상호작용 데이터</td><td>광고 게재 및 측정</td></tr>
           <tr><td>Firebase Analytics (Google)</td><td>화면 조회·체류 시간, 앱 이벤트, 대략적 지역, 기기·OS 정보, 익명 앱 인스턴스 식별자</td><td>이용 패턴 분석 및 앱 개선</td></tr>
           <tr><td>Firebase Crashlytics (Google)</td><td>충돌 로그, 스택 트레이스, 기기 상태, 앱 버전, 익명 설치 식별자</td><td>앱 안정성 개선</td></tr>
+          <tr><td>Meta Audience Network (Meta Platforms)</td><td>광고 식별자(AAID), IP 주소, 기기 정보, 광고 상호작용 데이터</td><td>광고 게재 및 측정 (AdMob 미디에이션)</td></tr>
+          <tr><td>Google Play 결제 (Google)</td><td>구매 내역·결제 상태 (카드 정보는 회사에 전달되지 않음)</td><td>프리미엄 이용권 결제 처리</td></tr>
+          <tr><td>Firebase Remote Config (Google)</td><td>앱 설치 식별자, 기기 정보</td><td>시험 일정 등 앱 설정값 원격 갱신</td></tr>
         </tbody>
       </table>
 
@@ -169,6 +185,8 @@
           <tr><td>광고 ID (com.google.android.gms.permission.AD_ID)</td><td>광고 식별자 접근(맞춤형 광고)</td></tr>
           <tr><td>알림 (POST_NOTIFICATIONS)</td><td>사용자가 설정한 일일 학습 알림 표시</td></tr>
           <tr><td>부팅 완료 수신 (RECEIVE_BOOT_COMPLETED)</td><td>재부팅 후 예약된 학습 알림 복원</td></tr>
+          <tr><td>마이크 (RECORD_AUDIO)</td><td>말하기 연습의 음성 인식 (기능 사용 시 권한 요청)</td></tr>
+          <tr><td>화면 켜짐 유지 (WAKE_LOCK)</td><td>핸즈프리 오디오 학습 중 화면 꺼짐 방지</td></tr>
         </tbody>
       </table>
 
@@ -178,6 +196,8 @@
         <li><strong>무료 서비스 유지:</strong> 광고 게재(배너/전면/보상형)</li>
         <li><strong>앱 개선:</strong> 이용 통계 분석, 충돌·오류 진단 데이터 분석</li>
         <li><strong>본인 통계 표시:</strong> 사용자 학습 진도와 성과 시각화</li>
+        <li><strong>다기기 동기화(선택):</strong> 구글 로그인 시 학습 진도·설정을 다른 기기와 동기화</li>
+        <li><strong>결제 처리:</strong> 프리미엄 이용권 구매 확인</li>
       </ol>
 
       <h2>제4조 (제3자 제공 및 SDK)</h2>
@@ -186,6 +206,7 @@
         <li>Google AdMob — <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
         <li>Google 광고(맞춤설정 관리) — <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a></li>
         <li>Firebase(Analytics·Crashlytics) — <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></li>
+        <li>Meta Audience Network — <a href="https://www.facebook.com/privacy/policy/" target="_blank">facebook.com/privacy/policy</a></li>
       </ul>
 
       <h2>제5조 (광고 및 사용자 동의 — GDPR/UMP)</h2>
@@ -193,12 +214,14 @@
         <li>유럽경제지역(EEA), 영국, 스위스 이용자에게는 앱 최초 실행 시 Google UMP(User Messaging Platform) 동의 양식이 표시되어, 맞춤형/비맞춤형 광고에 대한 동의를 선택할 수 있습니다.</li>
         <li>맞춤형 광고를 원치 않으시면 <strong>기기 설정 &gt; Google &gt; 광고</strong>에서 "광고 맞춤설정 선택 해제"를 켜거나 광고 ID를 재설정/삭제할 수 있습니다.</li>
         <li>앱 내 상점에서 코인으로 일정 기간 동안 광고를 제거할 수 있습니다.</li>
+        <li>광고 파트너(Meta Audience Network 포함)는 이 동의 선택과 각 사업자의 정책에 따라 광고를 제공합니다.</li>
       </ul>
 
       <h2>제6조 (개인정보의 보유 및 파기)</h2>
       <ul>
         <li><strong>기기 내 데이터:</strong> 앱을 삭제하면 모든 학습 기록과 설정이 즉시 영구 삭제됩니다.</li>
         <li><strong>AdMob/Firebase 데이터:</strong> Google의 데이터 보관 정책에 따라 처리·보관됩니다.</li>
+        <li><strong>클라우드 동기화 데이터:</strong> 구글 로그인을 사용한 경우 계정을 삭제할 때까지 Google Firebase에 보관되며, 삭제를 요청하시면 계정과 동기화 데이터 전부를 삭제합니다. 삭제 방법: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
       </ul>
 
       <h2>제7조 (아동의 개인정보 보호)</h2>
@@ -208,7 +231,7 @@
       <ul>
         <li>기기 내 데이터는 앱 전용 저장소에 보관(다른 앱이 접근 불가)</li>
         <li>광고·통계·충돌 데이터 전송은 HTTPS로 암호화</li>
-        <li>회사 자체 서버에 개인정보를 저장하지 않음</li>
+        <li>회사가 운영하는 자체 서버는 없으며, 동기화 데이터는 Google Firebase(Cloud Firestore)에 저장되고 전송 구간은 HTTPS로 암호화됩니다</li>
       </ul>
 
       <h2>제9조 (개인정보처리방침의 변경)</h2>
@@ -230,24 +253,25 @@
     <!-- ==================== English ==================== -->
     <div id="section-en" class="section-en">
       <h1>Privacy Policy</h1>
-      <p class="subtitle">TOPIK Korean (Learn Korean) | Effective Date: June 24, 2026 | Version 1.0</p>
+      <p class="subtitle">TOPIK Korean (Learn Korean) | Effective Date: September 27, 2026 | Version 1.1</p>
 
       <p>RedMoon Studio ("Company", "we", "us") operates the TOPIK Korean mobile application. This Privacy Policy explains how information is handled when you use our app.</p>
 
       <div class="info-box">
-        <strong>One-line Summary:</strong> TOPIK Korean requires no account and we do not directly collect personal information. However, to provide the app for free and to improve its quality we use <strong>Google AdMob (ads)</strong>, <strong>Firebase Analytics (usage statistics)</strong>, and <strong>Firebase Crashlytics (crash diagnostics)</strong>, which may collect advertising identifiers and device/usage/diagnostic information. Your learning data and settings are stored only on your device.
+        <strong>One-line Summary:</strong> TOPIK Korean works fully without an account, and your learning data and settings stay on your device by default. Only if you want to continue studying on another device can you <strong>optionally sign in with your Google account</strong>, in which case your learning progress and related data are stored and synced through Google Firebase. To provide the app for free and to improve its quality we also use <strong>Google AdMob and Meta Audience Network (ads)</strong>, <strong>Firebase Analytics (usage statistics)</strong>, and <strong>Firebase Crashlytics (crash diagnostics)</strong>, which may collect advertising identifiers and device/usage/diagnostic information.
       </div>
 
       <h2>1. Information Collected</h2>
 
       <h3>1.1 Information We Do NOT Directly Collect</h3>
       <ul>
-        <li>Personal identifiers such as name, email, phone number, date of birth</li>
+        <li>Personal identifiers such as name, phone number, date of birth (only if you choose the optional Google sign-in, the email address, display name and unique ID of your Google account are processed — see 1.3 below)</li>
         <li>Location data (GPS)</li>
         <li>Contacts, call history, photos/media</li>
+        <li>Recorded voice files (speech recognition in speaking practice is handled by your device's speech recognition service; the app does not store the audio or send it to us)</li>
       </ul>
 
-      <h3>1.2 Data Stored Only On Your Device (not transmitted to us)</h3>
+      <h3>1.2 Data Stored On Your Device (not transmitted anywhere unless you use Google sign-in and sync)</h3>
       <table>
         <thead><tr><th>Data Type</th><th>Purpose</th><th>Storage</th></tr></thead>
         <tbody>
@@ -259,13 +283,28 @@
         </tbody>
       </table>
 
-      <h3>1.3 Information Collected by Third-Party SDKs</h3>
+      <h3>1.3 Optional Feature: Google Sign-In &amp; Multi-Device Sync (Firebase Authentication · Cloud Firestore)</h3>
+      <p>The information below is stored in Google Firebase only if you sign in with your Google account in Settings. If you do not sign in, nothing is transmitted; signing out stops syncing.</p>
+      <table>
+        <thead><tr><th>Data Type</th><th>Purpose</th><th>Storage</th></tr></thead>
+        <tbody>
+          <tr><td>Google account info (email address, display name, unique ID)</td><td>Sign-in and account identification</td><td>Firebase Authentication</td></tr>
+          <tr><td>Learning progress &amp; review records (SRS), favorites, daily study statistics</td><td>Continue studying on another device</td><td>Cloud Firestore</td></tr>
+          <tr><td>Some settings (study level, theme, app language, notifications, etc.)</td><td>Keep settings consistent across devices</td><td>Cloud Firestore</td></tr>
+        </tbody>
+      </table>
+      <p>Coins, purchase/pass status and ad-related counters are not synced. See Section 6 for deletion of stored data.</p>
+
+      <h3>1.4 Information Collected by Third-Party SDKs</h3>
       <table>
         <thead><tr><th>Service</th><th>Data Collected</th><th>Purpose</th></tr></thead>
         <tbody>
           <tr><td>Google AdMob</td><td>Advertising ID (AAID), IP address, device info, ad interaction data</td><td>Ad serving and measurement</td></tr>
           <tr><td>Firebase Analytics (Google)</td><td>Screen views &amp; engagement time, app events, approximate region, device/OS info, anonymous app instance ID</td><td>Usage analysis and app improvement</td></tr>
           <tr><td>Firebase Crashlytics (Google)</td><td>Crash logs, stack traces, device state, app version, anonymous installation ID</td><td>App stability improvement</td></tr>
+          <tr><td>Meta Audience Network (Meta Platforms)</td><td>Advertising ID (AAID), IP address, device info, ad interaction data</td><td>Ad serving and measurement (via AdMob mediation)</td></tr>
+          <tr><td>Google Play Billing (Google)</td><td>Purchase history and payment status (card details are not passed to us)</td><td>Processing premium pass purchases</td></tr>
+          <tr><td>Firebase Remote Config (Google)</td><td>App installation identifier, device info</td><td>Remotely updating app values such as exam schedules</td></tr>
         </tbody>
       </table>
 
@@ -278,6 +317,8 @@
           <tr><td>Advertising ID (com.google.android.gms.permission.AD_ID)</td><td>Access advertising identifier (personalized ads)</td></tr>
           <tr><td>Notifications (POST_NOTIFICATIONS)</td><td>Show the daily study reminder you set</td></tr>
           <tr><td>Boot Completed (RECEIVE_BOOT_COMPLETED)</td><td>Restore scheduled study reminders after reboot</td></tr>
+          <tr><td>Microphone (RECORD_AUDIO)</td><td>Speech recognition in speaking practice (requested when you use the feature)</td></tr>
+          <tr><td>Keep Awake (WAKE_LOCK)</td><td>Prevent the screen from turning off during hands-free audio study</td></tr>
         </tbody>
       </table>
 
@@ -287,6 +328,8 @@
         <li><strong>Free service:</strong> Ad serving (banner / interstitial / rewarded)</li>
         <li><strong>App improvement:</strong> Analyzing usage statistics and crash/error diagnostics</li>
         <li><strong>Your statistics:</strong> Visualizing your own learning progress and performance</li>
+        <li><strong>Multi-device sync (optional):</strong> Sync learning progress and settings with your other devices when you sign in with Google</li>
+        <li><strong>Payment processing:</strong> Verifying premium pass purchases</li>
       </ol>
 
       <h2>4. Third-Party Services &amp; Sharing</h2>
@@ -295,6 +338,7 @@
         <li>Google AdMob — <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
         <li>Google Ads (manage personalization) — <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a></li>
         <li>Firebase (Analytics &amp; Crashlytics) — <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></li>
+        <li>Meta Audience Network — <a href="https://www.facebook.com/privacy/policy/" target="_blank">facebook.com/privacy/policy</a></li>
       </ul>
 
       <h2>5. Advertising &amp; Consent (GDPR/UMP)</h2>
@@ -302,12 +346,14 @@
         <li>Users in the European Economic Area (EEA), the UK, and Switzerland are shown a Google UMP (User Messaging Platform) consent form on first launch, where they can choose to consent to personalized or non-personalized ads.</li>
         <li>To opt out of personalized ads, enable "Opt out of Ads Personalization" or reset/delete your Advertising ID under <strong>Device Settings &gt; Google &gt; Ads</strong>.</li>
         <li>You can remove ads for a period of time using coins in the in-app shop.</li>
+        <li>Ad partners, including Meta Audience Network, serve ads according to this consent choice and each provider's own policies.</li>
       </ul>
 
       <h2>6. Data Retention and Deletion</h2>
       <ul>
         <li><strong>On-device data:</strong> Uninstalling the app immediately and permanently deletes all learning data and settings.</li>
         <li><strong>AdMob/Firebase data:</strong> Processed and retained according to Google's data retention policies.</li>
+        <li><strong>Cloud sync data:</strong> If you use Google sign-in, your data is kept in Google Firebase until you delete your account; on request we delete the account and all synced data. How to request deletion: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
       </ul>
 
       <h2>7. Children's Privacy</h2>
@@ -317,7 +363,7 @@
       <ul>
         <li>On-device data is kept in app-private storage (inaccessible to other apps)</li>
         <li>Ad, analytics, and crash data transmissions are encrypted via HTTPS</li>
-        <li>We do not store personal information on our own servers</li>
+        <li>We operate no servers of our own; sync data is stored in Google Firebase (Cloud Firestore) and transmitted over HTTPS</li>
       </ul>
 
       <h2>9. Changes to This Policy</h2>
@@ -334,24 +380,25 @@
     <!-- ==================== 日本語 ==================== -->
     <div id="section-ja" class="section-ja">
       <h1>プライバシーポリシー</h1>
-      <p class="subtitle">TOPIK Korean (韓国語学習) | 施行日: 2026年6月24日 | バージョン 1.0</p>
+      <p class="subtitle">TOPIK Korean (韓国語学習) | 施行日: 2026年9月27日 | バージョン 1.1</p>
 
       <p>RedMoon Studio(以下「当社」)は、TOPIK Korean モバイルアプリケーションを運営しています。本プライバシーポリシーは、本アプリご利用時の情報の取り扱いについて説明します。</p>
 
       <div class="info-box">
-        <strong>要約:</strong> TOPIK Korean は会員登録が不要で、当社が直接収集する個人情報はありません。ただし、アプリを無料で提供し品質を改善するために <strong>Google AdMob(広告)</strong>、<strong>Firebase Analytics(利用統計)</strong>、<strong>Firebase Crashlytics(クラッシュ診断)</strong> を使用しており、これらのサービスは広告識別子や端末・利用・診断情報を収集する場合があります。学習データと設定はユーザーの端末にのみ保存されます。
+        <strong>要約:</strong> TOPIK Korean は会員登録なしですべての機能をご利用いただけ、学習データと設定は標準ではユーザーの端末にのみ保存されます。別の端末で学習を続けたい場合に限り、<strong>任意でGoogleアカウントにログイン</strong>すると、学習の進捗などが Google Firebase に保存・同期されます。また、アプリを無料で提供し品質を改善するために <strong>Google AdMob および Meta Audience Network(広告)</strong>、<strong>Firebase Analytics(利用統計)</strong>、<strong>Firebase Crashlytics(クラッシュ診断)</strong> を使用しており、これらのサービスは広告識別子や端末・利用・診断情報を収集する場合があります。
       </div>
 
       <h2>第1条 (収集する情報)</h2>
 
       <h3>1. 当社が直接収集しない情報</h3>
       <ul>
-        <li>氏名、メールアドレス、電話番号、生年月日などの個人識別情報</li>
+        <li>氏名、電話番号、生年月日などの個人識別情報(任意機能であるGoogleログインをご利用の場合に限り、Googleアカウントのメールアドレス・表示名・固有IDが処理されます — 下記3項参照)</li>
         <li>位置情報(GPS)</li>
         <li>連絡先、通話履歴、写真/メディア</li>
+        <li>録音された音声ファイル(スピーキング練習の音声認識は端末の音声認識サービスが処理し、アプリは音声を保存したり当社へ送信したりしません)</li>
       </ul>
 
-      <h3>2. 端末内のみに保存されるデータ(当社へ送信されません)</h3>
+      <h3>2. 端末内に保存されるデータ(Googleログイン・同期を使用しない限り端末外へ送信されません)</h3>
       <table>
         <thead><tr><th>項目</th><th>用途</th><th>保存場所</th></tr></thead>
         <tbody>
@@ -363,13 +410,28 @@
         </tbody>
       </table>
 
-      <h3>3. 第三者サービス(SDK)が収集する情報</h3>
+      <h3>3. 任意機能: Googleログインとマルチデバイス同期(Firebase Authentication・Cloud Firestore)</h3>
+      <p>設定画面でGoogleアカウントにログインした場合に限り、以下の情報が Google Firebase に保存されます。ログインしなければ送信されず、ログアウトすると同期は停止します。</p>
+      <table>
+        <thead><tr><th>項目</th><th>用途</th><th>保存場所</th></tr></thead>
+        <tbody>
+          <tr><td>Googleアカウント情報(メールアドレス、表示名、固有ID)</td><td>ログインとアカウントの識別</td><td>Firebase Authentication</td></tr>
+          <tr><td>学習の進捗・復習記録(SRS)、お気に入り、日別学習統計</td><td>別の端末での学習の継続</td><td>Cloud Firestore</td></tr>
+          <tr><td>一部の設定(学習級、テーマ、アプリ言語、通知など)</td><td>端末間での設定の統一</td><td>Cloud Firestore</td></tr>
+        </tbody>
+      </table>
+      <p>コイン、購入・利用権の状態、広告関連のカウンターは同期されません。保存されたデータの削除については第6条をご覧ください。</p>
+
+      <h3>4. 第三者サービス(SDK)が収集する情報</h3>
       <table>
         <thead><tr><th>サービス</th><th>収集情報</th><th>目的</th></tr></thead>
         <tbody>
           <tr><td>Google AdMob</td><td>広告識別子(AAID)、IPアドレス、端末情報、広告インタラクションデータ</td><td>広告配信および測定</td></tr>
           <tr><td>Firebase Analytics (Google)</td><td>画面の表示・滞在時間、アプリイベント、おおよその地域、端末・OS情報、匿名アプリインスタンス識別子</td><td>利用傾向の分析およびアプリ改善</td></tr>
           <tr><td>Firebase Crashlytics (Google)</td><td>クラッシュログ、スタックトレース、端末状態、アプリバージョン、匿名インストール識別子</td><td>アプリ安定性の改善</td></tr>
+          <tr><td>Meta Audience Network (Meta Platforms)</td><td>広告識別子(AAID)、IPアドレス、端末情報、広告のインタラクションデータ</td><td>広告配信と計測(AdMobメディエーション)</td></tr>
+          <tr><td>Google Play 課金 (Google)</td><td>購入履歴・決済状態(カード情報は当社へ渡りません)</td><td>プレミアム利用権の決済処理</td></tr>
+          <tr><td>Firebase Remote Config (Google)</td><td>アプリのインストール識別子、端末情報</td><td>試験日程などアプリ設定値のリモート更新</td></tr>
         </tbody>
       </table>
 
@@ -382,6 +444,8 @@
           <tr><td>広告ID (com.google.android.gms.permission.AD_ID)</td><td>広告識別子へのアクセス(パーソナライズ広告)</td></tr>
           <tr><td>通知 (POST_NOTIFICATIONS)</td><td>ユーザーが設定した毎日の学習リマインダーの表示</td></tr>
           <tr><td>起動完了の受信 (RECEIVE_BOOT_COMPLETED)</td><td>再起動後に予約された学習リマインダーの復元</td></tr>
+          <tr><td>マイク (RECORD_AUDIO)</td><td>スピーキング練習の音声認識(機能の使用時に許可を要求)</td></tr>
+          <tr><td>画面オン維持 (WAKE_LOCK)</td><td>ハンズフリー音声学習中の画面消灯を防止</td></tr>
         </tbody>
       </table>
 
@@ -391,6 +455,8 @@
         <li><strong>無料サービスの維持:</strong> 広告配信(バナー/インタースティシャル/リワード)</li>
         <li><strong>アプリ改善:</strong> 利用統計の分析、クラッシュ・エラー診断データの分析</li>
         <li><strong>本人の統計表示:</strong> ユーザー本人の学習進捗と成果の可視化</li>
+        <li><strong>マルチデバイス同期(任意):</strong> Googleログイン時に学習の進捗・設定を他の端末と同期</li>
+        <li><strong>決済処理:</strong> プレミアム利用権の購入確認</li>
       </ol>
 
       <h2>第4条 (第三者サービスと提供)</h2>
@@ -399,6 +465,7 @@
         <li>Google AdMob — <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
         <li>Google 広告(パーソナライズ管理) — <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a></li>
         <li>Firebase(Analytics・Crashlytics) — <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></li>
+        <li>Meta Audience Network — <a href="https://www.facebook.com/privacy/policy/" target="_blank">facebook.com/privacy/policy</a></li>
       </ul>
 
       <h2>第5条 (広告とユーザー同意 — GDPR/UMP)</h2>
@@ -406,12 +473,14 @@
         <li>欧州経済領域(EEA)、英国、スイスのユーザーには、アプリ初回起動時にGoogle UMP(User Messaging Platform)の同意フォームが表示され、パーソナライズ広告/非パーソナライズ広告への同意を選択できます。</li>
         <li>パーソナライズ広告を希望されない場合は、<strong>端末の設定 &gt; Google &gt; 広告</strong>で「広告のパーソナライズをオプトアウト」を有効にするか、広告IDをリセット/削除できます。</li>
         <li>アプリ内ショップでコインを使って、一定期間広告を非表示にできます。</li>
+        <li>Meta Audience Network を含む広告パートナーは、この同意の選択と各事業者のポリシーに従って広告を配信します。</li>
       </ul>
 
       <h2>第6条 (個人情報の保有及び破棄)</h2>
       <ul>
         <li><strong>端末内データ:</strong> アプリをアンインストールすると、すべての学習データと設定が即座に永久削除されます。</li>
         <li><strong>AdMob/Firebaseデータ:</strong> Googleのデータ保管ポリシーに従って処理・保管されます。</li>
+        <li><strong>クラウド同期データ:</strong> Googleログインをご利用の場合、アカウントを削除するまで Google Firebase に保管され、ご要望に応じてアカウントと同期データをすべて削除します。削除方法: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
       </ul>
 
       <h2>第7条 (児童のプライバシー保護)</h2>
@@ -421,7 +490,7 @@
       <ul>
         <li>端末内データはアプリ専用ストレージに保管(他のアプリからアクセス不可)</li>
         <li>広告・統計・クラッシュデータの送信はHTTPSで暗号化</li>
-        <li>当社自身のサーバーに個人情報を保存しません</li>
+        <li>当社が運営する独自のサーバーはなく、同期データは Google Firebase(Cloud Firestore)に保存され、通信は HTTPS で暗号化されます</li>
       </ul>
 
       <h2>第9条 (プライバシーポリシーの変更)</h2>
@@ -438,24 +507,25 @@
     <!-- ==================== 简体中文 ==================== -->
     <div id="section-zhhans" class="section-zhhans">
       <h1>隐私政策</h1>
-      <p class="subtitle">TOPIK Korean (韩语学习) | 生效日期: 2026年6月24日 | 版本 1.0</p>
+      <p class="subtitle">TOPIK Korean (韩语学习) | 生效日期: 2026年9月27日 | 版本 1.1</p>
 
       <p>RedMoon Studio(以下简称"本公司")运营 TOPIK Korean 移动应用程序。本隐私政策说明您使用本应用时信息的处理方式。</p>
 
       <div class="info-box">
-        <strong>摘要:</strong> TOPIK Korean 无需注册账户,本公司不直接收集个人信息。但为免费提供本应用并改善其质量,我们使用 <strong>Google AdMob(广告)</strong>、<strong>Firebase Analytics(使用统计)</strong> 和 <strong>Firebase Crashlytics(崩溃诊断)</strong>,这些服务可能会收集广告标识符以及设备/使用/诊断信息。您的学习数据和设置仅存储在您的设备上。
+        <strong>摘要:</strong> TOPIK Korean 无需注册即可使用全部功能,学习数据和设置默认仅保存在您的设备上。只有当您希望在其他设备上继续学习时,才可<strong>选择使用 Google 账号登录</strong>,此时学习进度等数据会通过 Google Firebase 保存并同步。此外,为免费提供应用并改进质量,我们使用 <strong>Google AdMob 和 Meta Audience Network(广告)</strong>、<strong>Firebase Analytics(使用统计)</strong>、<strong>Firebase Crashlytics(崩溃诊断)</strong>,这些服务可能会收集广告标识符以及设备、使用和诊断信息。
       </div>
 
       <h2>第1条 (收集的信息)</h2>
 
       <h3>1. 本公司不直接收集的信息</h3>
       <ul>
-        <li>姓名、电子邮件、电话号码、出生日期等个人识别信息</li>
+        <li>姓名、电话号码、出生日期等个人身份信息(仅当您选择使用可选功能 Google 登录时,才会处理您 Google 账号的电子邮件地址、显示名称和唯一 ID — 见下文第 3 项)</li>
         <li>位置信息(GPS)</li>
         <li>通讯录、通话记录、照片/媒体</li>
+        <li>录制的语音文件(口语练习的语音识别由设备自带的语音识别服务处理,应用不会保存语音,也不会将其发送给我们)</li>
       </ul>
 
-      <h3>2. 仅存储于设备中的数据(不会传输给本公司)</h3>
+      <h3>2. 仅保存在设备内的数据(不使用 Google 登录和同步则不会传出设备)</h3>
       <table>
         <thead><tr><th>项目</th><th>用途</th><th>存储位置</th></tr></thead>
         <tbody>
@@ -467,13 +537,28 @@
         </tbody>
       </table>
 
-      <h3>3. 第三方服务(SDK)收集的信息</h3>
+      <h3>3. 可选功能: Google 登录与多设备同步(Firebase Authentication · Cloud Firestore)</h3>
+      <p>仅当您在设置中使用 Google 账号登录时,以下信息才会保存到 Google Firebase。未登录则不会传输;退出登录后同步即停止。</p>
+      <table>
+        <thead><tr><th>项目</th><th>用途</th><th>存储位置</th></tr></thead>
+        <tbody>
+          <tr><td>Google 账号信息(电子邮件地址、显示名称、唯一 ID)</td><td>登录与账号识别</td><td>Firebase Authentication</td></tr>
+          <tr><td>学习进度和复习记录(SRS)、收藏、每日学习统计</td><td>在其他设备上继续学习</td><td>Cloud Firestore</td></tr>
+          <tr><td>部分设置(学习级别、主题、应用语言、通知等)</td><td>在设备间保持设置一致</td><td>Cloud Firestore</td></tr>
+        </tbody>
+      </table>
+      <p>金币、购买/通行权状态以及广告相关计数不会同步。已存储数据的删除请参见第6条。</p>
+
+      <h3>4. 第三方服务(SDK)收集的信息</h3>
       <table>
         <thead><tr><th>服务</th><th>收集的数据</th><th>目的</th></tr></thead>
         <tbody>
           <tr><td>Google AdMob</td><td>广告标识符(AAID)、IP地址、设备信息、广告互动数据</td><td>广告投放与衡量</td></tr>
           <tr><td>Firebase Analytics (Google)</td><td>屏幕浏览·停留时间、应用事件、大致地区、设备·系统信息、匿名应用实例标识符</td><td>使用情况分析与应用改进</td></tr>
           <tr><td>Firebase Crashlytics (Google)</td><td>崩溃日志、堆栈跟踪、设备状态、应用版本、匿名安装标识符</td><td>提升应用稳定性</td></tr>
+          <tr><td>Meta Audience Network (Meta Platforms)</td><td>广告标识符(AAID)、IP 地址、设备信息、广告互动数据</td><td>广告投放与衡量(AdMob 聚合)</td></tr>
+          <tr><td>Google Play 结算 (Google)</td><td>购买记录和支付状态(银行卡信息不会传给我们)</td><td>处理高级通行权的支付</td></tr>
+          <tr><td>Firebase Remote Config (Google)</td><td>应用安装标识符、设备信息</td><td>远程更新考试日程等应用配置值</td></tr>
         </tbody>
       </table>
 
@@ -486,6 +571,8 @@
           <tr><td>广告 ID (com.google.android.gms.permission.AD_ID)</td><td>访问广告标识符(个性化广告)</td></tr>
           <tr><td>通知 (POST_NOTIFICATIONS)</td><td>显示您设置的每日学习提醒</td></tr>
           <tr><td>接收启动完成 (RECEIVE_BOOT_COMPLETED)</td><td>重启后恢复已预约的学习提醒</td></tr>
+          <tr><td>麦克风 (RECORD_AUDIO)</td><td>口语练习中的语音识别(使用该功能时请求授权)</td></tr>
+          <tr><td>保持屏幕常亮 (WAKE_LOCK)</td><td>免提音频学习时防止屏幕熄灭</td></tr>
         </tbody>
       </table>
 
@@ -495,6 +582,8 @@
         <li><strong>维持免费服务:</strong> 广告投放(横幅/插页/激励视频)</li>
         <li><strong>改进应用:</strong> 分析使用统计、崩溃和错误诊断数据</li>
         <li><strong>显示您的统计:</strong> 可视化您本人的学习进度与成绩</li>
+        <li><strong>多设备同步(可选):</strong> 使用 Google 登录后,与其他设备同步学习进度和设置</li>
+        <li><strong>支付处理:</strong> 确认高级通行权的购买</li>
       </ol>
 
       <h2>第4条 (第三方服务与披露)</h2>
@@ -503,6 +592,7 @@
         <li>Google AdMob — <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
         <li>Google 广告(管理个性化) — <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a></li>
         <li>Firebase(Analytics·Crashlytics) — <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></li>
+        <li>Meta Audience Network — <a href="https://www.facebook.com/privacy/policy/" target="_blank">facebook.com/privacy/policy</a></li>
       </ul>
 
       <h2>第5条 (广告与用户同意 — GDPR/UMP)</h2>
@@ -510,12 +600,14 @@
         <li>对于欧洲经济区(EEA)、英国和瑞士的用户,应用首次启动时会显示 Google UMP(User Messaging Platform)同意表单,可选择是否同意个性化/非个性化广告。</li>
         <li>如不希望接收个性化广告,可在<strong>设备设置 &gt; Google &gt; 广告</strong>中开启"停用广告个性化",或重置/删除您的广告 ID。</li>
         <li>您可以在应用内商店使用金币去除一段时间的广告。</li>
+        <li>包括 Meta Audience Network 在内的广告合作伙伴将根据此同意选择及各自的政策投放广告。</li>
       </ul>
 
       <h2>第6条 (数据保留与删除)</h2>
       <ul>
         <li><strong>设备内数据:</strong> 卸载应用将立即永久删除所有学习数据和设置。</li>
         <li><strong>AdMob/Firebase 数据:</strong> 按照 Google 的数据保留政策进行处理和保留。</li>
+        <li><strong>云同步数据:</strong> 如果您使用 Google 登录,数据将保存在 Google Firebase 中,直至您删除账号;应您的请求,我们会删除账号及全部同步数据。删除方法: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
       </ul>
 
       <h2>第7条 (儿童隐私保护)</h2>
@@ -525,7 +617,7 @@
       <ul>
         <li>设备内数据保存在应用专用存储中(其他应用无法访问)</li>
         <li>广告·统计·崩溃数据的传输通过 HTTPS 加密</li>
-        <li>本公司不在自有服务器上存储个人信息</li>
+        <li>我们不运营自有服务器;同步数据存储在 Google Firebase(Cloud Firestore)中,传输过程通过 HTTPS 加密</li>
       </ul>
 
       <h2>第9条 (隐私政策的变更)</h2>
@@ -542,24 +634,25 @@
     <!-- ==================== 繁體中文 ==================== -->
     <div id="section-zhhant" class="section-zhhant">
       <h1>隱私政策</h1>
-      <p class="subtitle">TOPIK Korean (韓語學習) | 生效日期: 2026年6月24日 | 版本 1.0</p>
+      <p class="subtitle">TOPIK Korean (韓語學習) | 生效日期: 2026年9月27日 | 版本 1.1</p>
 
       <p>RedMoon Studio(以下簡稱「本公司」)營運 TOPIK Korean 行動應用程式。本隱私政策說明您使用本應用時資訊的處理方式。</p>
 
       <div class="info-box">
-        <strong>摘要:</strong> TOPIK Korean 無需註冊帳號,本公司不直接收集個人資訊。但為免費提供本應用並改善其品質,我們使用 <strong>Google AdMob(廣告)</strong>、<strong>Firebase Analytics(使用統計)</strong> 與 <strong>Firebase Crashlytics(當機診斷)</strong>,這些服務可能會收集廣告識別碼及裝置/使用/診斷資訊。您的學習資料與設定僅儲存在您的裝置上。
+        <strong>摘要:</strong> TOPIK Korean 無需註冊即可使用全部功能,學習資料與設定預設僅儲存在您的裝置上。只有當您希望在其他裝置上繼續學習時,才可<strong>選擇使用 Google 帳號登入</strong>,此時學習進度等資料會透過 Google Firebase 儲存並同步。此外,為免費提供應用程式並改善品質,我們使用 <strong>Google AdMob 與 Meta Audience Network(廣告)</strong>、<strong>Firebase Analytics(使用統計)</strong>、<strong>Firebase Crashlytics(當機診斷)</strong>,這些服務可能會收集廣告識別碼以及裝置、使用與診斷資訊。
       </div>
 
       <h2>第1條 (收集的資訊)</h2>
 
       <h3>1. 本公司不直接收集的資訊</h3>
       <ul>
-        <li>姓名、電子郵件、電話號碼、出生日期等個人識別資訊</li>
+        <li>姓名、電話號碼、出生日期等個人識別資訊(僅當您選擇使用選用功能 Google 登入時,才會處理您 Google 帳號的電子郵件地址、顯示名稱與唯一 ID — 請見下方第 3 項)</li>
         <li>位置資訊(GPS)</li>
-        <li>通訊錄、通話記錄、相片/媒體</li>
+        <li>聯絡人、通話記錄、照片/媒體</li>
+        <li>錄製的語音檔案(口說練習的語音辨識由裝置內建的語音辨識服務處理,應用程式不會儲存語音,也不會將其傳送給我們)</li>
       </ul>
 
-      <h3>2. 僅儲存於裝置中的資料(不會傳輸給本公司)</h3>
+      <h3>2. 僅儲存在裝置內的資料(未使用 Google 登入與同步則不會傳出裝置)</h3>
       <table>
         <thead><tr><th>項目</th><th>用途</th><th>儲存位置</th></tr></thead>
         <tbody>
@@ -571,13 +664,28 @@
         </tbody>
       </table>
 
-      <h3>3. 第三方服務(SDK)收集的資訊</h3>
+      <h3>3. 選用功能: Google 登入與多裝置同步(Firebase Authentication · Cloud Firestore)</h3>
+      <p>僅當您在設定中使用 Google 帳號登入時,以下資訊才會儲存到 Google Firebase。未登入則不會傳輸;登出後同步即停止。</p>
+      <table>
+        <thead><tr><th>項目</th><th>用途</th><th>儲存位置</th></tr></thead>
+        <tbody>
+          <tr><td>Google 帳號資訊(電子郵件地址、顯示名稱、唯一 ID)</td><td>登入與帳號識別</td><td>Firebase Authentication</td></tr>
+          <tr><td>學習進度與複習記錄(SRS)、收藏、每日學習統計</td><td>在其他裝置上繼續學習</td><td>Cloud Firestore</td></tr>
+          <tr><td>部分設定(學習級別、主題、應用程式語言、通知等)</td><td>在裝置間保持設定一致</td><td>Cloud Firestore</td></tr>
+        </tbody>
+      </table>
+      <p>金幣、購買/通行權狀態以及廣告相關計數不會同步。已儲存資料的刪除請參閱第6條。</p>
+
+      <h3>4. 第三方服務(SDK)收集的資訊</h3>
       <table>
         <thead><tr><th>服務</th><th>收集的資料</th><th>目的</th></tr></thead>
         <tbody>
           <tr><td>Google AdMob</td><td>廣告識別碼(AAID)、IP位址、裝置資訊、廣告互動資料</td><td>廣告投放與衡量</td></tr>
           <tr><td>Firebase Analytics (Google)</td><td>畫面瀏覽·停留時間、應用事件、大致地區、裝置·系統資訊、匿名應用執行個體識別碼</td><td>使用情況分析與應用改善</td></tr>
           <tr><td>Firebase Crashlytics (Google)</td><td>當機記錄、堆疊追蹤、裝置狀態、應用版本、匿名安裝識別碼</td><td>提升應用穩定性</td></tr>
+          <tr><td>Meta Audience Network (Meta Platforms)</td><td>廣告識別碼(AAID)、IP 位址、裝置資訊、廣告互動資料</td><td>廣告投放與衡量(AdMob 聚合)</td></tr>
+          <tr><td>Google Play 計費 (Google)</td><td>購買記錄與付款狀態(信用卡資訊不會傳給我們)</td><td>處理進階通行權的付款</td></tr>
+          <tr><td>Firebase Remote Config (Google)</td><td>應用程式安裝識別碼、裝置資訊</td><td>遠端更新考試日程等應用程式設定值</td></tr>
         </tbody>
       </table>
 
@@ -590,6 +698,8 @@
           <tr><td>廣告 ID (com.google.android.gms.permission.AD_ID)</td><td>存取廣告識別碼(個人化廣告)</td></tr>
           <tr><td>通知 (POST_NOTIFICATIONS)</td><td>顯示您設定的每日學習提醒</td></tr>
           <tr><td>接收開機完成 (RECEIVE_BOOT_COMPLETED)</td><td>重新開機後還原已排程的學習提醒</td></tr>
+          <tr><td>麥克風 (RECORD_AUDIO)</td><td>口說練習中的語音辨識(使用該功能時請求授權)</td></tr>
+          <tr><td>保持螢幕開啟 (WAKE_LOCK)</td><td>免持音訊學習時避免螢幕熄滅</td></tr>
         </tbody>
       </table>
 
@@ -599,6 +709,8 @@
         <li><strong>維持免費服務:</strong> 廣告投放(橫幅/插頁/獎勵影片)</li>
         <li><strong>改善應用:</strong> 分析使用統計、當機與錯誤診斷資料</li>
         <li><strong>顯示您的統計:</strong> 視覺化您本人的學習進度與成績</li>
+        <li><strong>多裝置同步(選用):</strong> 使用 Google 登入後,與其他裝置同步學習進度與設定</li>
+        <li><strong>付款處理:</strong> 確認進階通行權的購買</li>
       </ol>
 
       <h2>第4條 (第三方服務與揭露)</h2>
@@ -607,6 +719,7 @@
         <li>Google AdMob — <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
         <li>Google 廣告(管理個人化) — <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a></li>
         <li>Firebase(Analytics·Crashlytics) — <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></li>
+        <li>Meta Audience Network — <a href="https://www.facebook.com/privacy/policy/" target="_blank">facebook.com/privacy/policy</a></li>
       </ul>
 
       <h2>第5條 (廣告與使用者同意 — GDPR/UMP)</h2>
@@ -614,12 +727,14 @@
         <li>對於歐洲經濟區(EEA)、英國與瑞士的使用者,應用首次啟動時會顯示 Google UMP(User Messaging Platform)同意表單,可選擇是否同意個人化/非個人化廣告。</li>
         <li>如不希望接收個人化廣告,可在<strong>裝置設定 &gt; Google &gt; 廣告</strong>中開啟「停用廣告個人化」,或重設/刪除您的廣告 ID。</li>
         <li>您可以在應用內商店使用金幣移除一段時間的廣告。</li>
+        <li>包含 Meta Audience Network 在內的廣告合作夥伴,將依此同意選擇及各自的政策投放廣告。</li>
       </ul>
 
       <h2>第6條 (資料保留與刪除)</h2>
       <ul>
         <li><strong>裝置內資料:</strong> 解除安裝應用將立即永久刪除所有學習資料與設定。</li>
         <li><strong>AdMob/Firebase 資料:</strong> 依照 Google 的資料保留政策進行處理與保留。</li>
+        <li><strong>雲端同步資料:</strong> 若您使用 Google 登入,資料將保存在 Google Firebase 中,直到您刪除帳號;經您請求,我們會刪除帳號及全部同步資料。刪除方式: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
       </ul>
 
       <h2>第7條 (兒童隱私保護)</h2>
@@ -629,7 +744,7 @@
       <ul>
         <li>裝置內資料保存在應用專用儲存空間中(其他應用無法存取)</li>
         <li>廣告·統計·當機資料的傳輸透過 HTTPS 加密</li>
-        <li>本公司不在自有伺服器上儲存個人資訊</li>
+        <li>我們不營運自有伺服器;同步資料儲存在 Google Firebase(Cloud Firestore)中,傳輸過程透過 HTTPS 加密</li>
       </ul>
 
       <h2>第9條 (隱私政策的變更)</h2>
@@ -646,24 +761,25 @@
     <!-- ==================== Tiếng Việt ==================== -->
     <div id="section-vi" class="section-vi">
       <h1>Chính sách quyền riêng tư</h1>
-      <p class="subtitle">TOPIK Korean (Học tiếng Hàn) | Ngày hiệu lực: 24 tháng 6 năm 2026 | Phiên bản 1.0</p>
+      <p class="subtitle">TOPIK Korean (Học tiếng Hàn) | Ngày hiệu lực: 27 tháng 9 năm 2026 | Phiên bản 1.1</p>
 
       <p>RedMoon Studio ("Công ty", "chúng tôi") vận hành ứng dụng di động TOPIK Korean. Chính sách quyền riêng tư này giải thích cách thông tin được xử lý khi bạn sử dụng ứng dụng của chúng tôi.</p>
 
       <div class="info-box">
-        <strong>Tóm tắt:</strong> TOPIK Korean không yêu cầu tài khoản và chúng tôi không trực tiếp thu thập thông tin cá nhân. Tuy nhiên, để cung cấp ứng dụng miễn phí và cải thiện chất lượng, chúng tôi sử dụng <strong>Google AdMob (quảng cáo)</strong>, <strong>Firebase Analytics (thống kê sử dụng)</strong> và <strong>Firebase Crashlytics (chẩn đoán sự cố)</strong>, các dịch vụ này có thể thu thập mã nhận dạng quảng cáo và thông tin thiết bị/sử dụng/chẩn đoán. Dữ liệu học tập và cài đặt của bạn chỉ được lưu trên thiết bị của bạn.
+        <strong>Tóm tắt:</strong> TOPIK Korean dùng được đầy đủ tính năng mà không cần tài khoản, dữ liệu học và cài đặt mặc định chỉ lưu trên thiết bị của bạn. Chỉ khi muốn học tiếp trên thiết bị khác, bạn mới có thể <strong>tùy chọn đăng nhập bằng tài khoản Google</strong>; khi đó tiến độ học và một số dữ liệu liên quan được lưu và đồng bộ qua Google Firebase. Ngoài ra, để cung cấp ứng dụng miễn phí và cải thiện chất lượng, chúng tôi sử dụng <strong>Google AdMob và Meta Audience Network (quảng cáo)</strong>, <strong>Firebase Analytics (thống kê sử dụng)</strong> và <strong>Firebase Crashlytics (chẩn đoán lỗi)</strong>; các dịch vụ này có thể thu thập mã nhận dạng quảng cáo cùng thông tin thiết bị, sử dụng và chẩn đoán.
       </div>
 
       <h2>1. Thông tin được thu thập</h2>
 
       <h3>1.1 Thông tin chúng tôi KHÔNG trực tiếp thu thập</h3>
       <ul>
-        <li>Thông tin định danh cá nhân như tên, email, số điện thoại, ngày sinh</li>
+        <li>Thông tin nhận dạng cá nhân như họ tên, số điện thoại, ngày sinh (chỉ khi bạn chọn dùng tính năng tùy chọn đăng nhập Google, địa chỉ email, tên hiển thị và mã định danh duy nhất của tài khoản Google mới được xử lý — xem mục 3 bên dưới)</li>
         <li>Dữ liệu vị trí (GPS)</li>
-        <li>Danh bạ, lịch sử cuộc gọi, ảnh/phương tiện</li>
+        <li>Danh bạ, nhật ký cuộc gọi, ảnh/phương tiện</li>
+        <li>Tệp giọng nói đã ghi (nhận dạng giọng nói trong phần luyện nói do dịch vụ nhận dạng giọng nói của thiết bị xử lý; ứng dụng không lưu âm thanh và không gửi cho chúng tôi)</li>
       </ul>
 
-      <h3>1.2 Dữ liệu chỉ lưu trên thiết bị của bạn (không được truyền về chúng tôi)</h3>
+      <h3>2. Dữ liệu lưu trên thiết bị (không được gửi ra ngoài nếu bạn không dùng đăng nhập Google và đồng bộ)</h3>
       <table>
         <thead><tr><th>Loại dữ liệu</th><th>Mục đích</th><th>Lưu trữ</th></tr></thead>
         <tbody>
@@ -675,13 +791,28 @@
         </tbody>
       </table>
 
-      <h3>1.3 Thông tin được thu thập bởi SDK của bên thứ ba</h3>
+      <h3>3. Tính năng tùy chọn: Đăng nhập Google và đồng bộ đa thiết bị (Firebase Authentication · Cloud Firestore)</h3>
+      <p>Chỉ khi bạn đăng nhập bằng tài khoản Google trong phần Cài đặt, các thông tin dưới đây mới được lưu vào Google Firebase. Nếu không đăng nhập, không có gì được gửi đi; đăng xuất sẽ dừng đồng bộ.</p>
+      <table>
+        <thead><tr><th>Mục</th><th>Mục đích</th><th>Nơi lưu trữ</th></tr></thead>
+        <tbody>
+          <tr><td>Thông tin tài khoản Google (địa chỉ email, tên hiển thị, mã định danh duy nhất)</td><td>Đăng nhập và nhận dạng tài khoản</td><td>Firebase Authentication</td></tr>
+          <tr><td>Tiến độ học và lịch sử ôn tập (SRS), mục yêu thích, thống kê học theo ngày</td><td>Học tiếp trên thiết bị khác</td><td>Cloud Firestore</td></tr>
+          <tr><td>Một số cài đặt (cấp độ học, giao diện, ngôn ngữ ứng dụng, thông báo, v.v.)</td><td>Đồng nhất cài đặt giữa các thiết bị</td><td>Cloud Firestore</td></tr>
+        </tbody>
+      </table>
+      <p>Xu, trạng thái mua/gói và bộ đếm liên quan đến quảng cáo không được đồng bộ. Về việc xóa dữ liệu đã lưu, xem Điều 6.</p>
+
+      <h3>1.4 Thông tin được thu thập bởi SDK của bên thứ ba</h3>
       <table>
         <thead><tr><th>Dịch vụ</th><th>Dữ liệu thu thập</th><th>Mục đích</th></tr></thead>
         <tbody>
           <tr><td>Google AdMob</td><td>Mã quảng cáo (AAID), địa chỉ IP, thông tin thiết bị, dữ liệu tương tác quảng cáo</td><td>Phân phối và đo lường quảng cáo</td></tr>
           <tr><td>Firebase Analytics (Google)</td><td>Lượt xem màn hình &amp; thời gian tương tác, sự kiện ứng dụng, khu vực gần đúng, thông tin thiết bị/HĐH, mã phiên bản ứng dụng ẩn danh</td><td>Phân tích sử dụng và cải thiện ứng dụng</td></tr>
           <tr><td>Firebase Crashlytics (Google)</td><td>Nhật ký sự cố, dấu vết ngăn xếp, trạng thái thiết bị, phiên bản ứng dụng, mã cài đặt ẩn danh</td><td>Cải thiện độ ổn định của ứng dụng</td></tr>
+          <tr><td>Meta Audience Network (Meta Platforms)</td><td>Mã nhận dạng quảng cáo (AAID), địa chỉ IP, thông tin thiết bị, dữ liệu tương tác quảng cáo</td><td>Hiển thị và đo lường quảng cáo (qua AdMob mediation)</td></tr>
+          <tr><td>Google Play Billing (Google)</td><td>Lịch sử mua và trạng thái thanh toán (thông tin thẻ không được chuyển cho chúng tôi)</td><td>Xử lý thanh toán gói Premium</td></tr>
+          <tr><td>Firebase Remote Config (Google)</td><td>Mã nhận dạng cài đặt ứng dụng, thông tin thiết bị</td><td>Cập nhật từ xa các giá trị như lịch thi</td></tr>
         </tbody>
       </table>
 
@@ -694,6 +825,8 @@
           <tr><td>Mã quảng cáo (com.google.android.gms.permission.AD_ID)</td><td>Truy cập mã nhận dạng quảng cáo (quảng cáo cá nhân hóa)</td></tr>
           <tr><td>Thông báo (POST_NOTIFICATIONS)</td><td>Hiển thị lời nhắc học hằng ngày bạn đã đặt</td></tr>
           <tr><td>Nhận khởi động hoàn tất (RECEIVE_BOOT_COMPLETED)</td><td>Khôi phục lời nhắc học đã lên lịch sau khi khởi động lại</td></tr>
+          <tr><td>Micrô (RECORD_AUDIO)</td><td>Nhận dạng giọng nói trong luyện nói (yêu cầu quyền khi bạn dùng tính năng)</td></tr>
+          <tr><td>Giữ màn hình sáng (WAKE_LOCK)</td><td>Ngăn màn hình tắt khi học bằng âm thanh rảnh tay</td></tr>
         </tbody>
       </table>
 
@@ -703,6 +836,8 @@
         <li><strong>Dịch vụ miễn phí:</strong> Phân phối quảng cáo (biểu ngữ / xen kẽ / có thưởng)</li>
         <li><strong>Cải thiện ứng dụng:</strong> Phân tích thống kê sử dụng và chẩn đoán sự cố/lỗi</li>
         <li><strong>Thống kê của bạn:</strong> Trực quan hóa tiến độ và kết quả học tập của chính bạn</li>
+        <li><strong>Đồng bộ đa thiết bị (tùy chọn):</strong> Đồng bộ tiến độ học và cài đặt với thiết bị khác khi đăng nhập Google</li>
+        <li><strong>Xử lý thanh toán:</strong> Xác nhận việc mua gói Premium</li>
       </ol>
 
       <h2>4. Dịch vụ bên thứ ba &amp; chia sẻ</h2>
@@ -711,6 +846,7 @@
         <li>Google AdMob — <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
         <li>Google Ads (quản lý cá nhân hóa) — <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a></li>
         <li>Firebase (Analytics &amp; Crashlytics) — <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></li>
+        <li>Meta Audience Network — <a href="https://www.facebook.com/privacy/policy/" target="_blank">facebook.com/privacy/policy</a></li>
       </ul>
 
       <h2>5. Quảng cáo &amp; sự đồng ý (GDPR/UMP)</h2>
@@ -718,12 +854,14 @@
         <li>Người dùng tại Khu vực Kinh tế Châu Âu (EEA), Vương quốc Anh và Thụy Sĩ sẽ thấy biểu mẫu đồng ý Google UMP (User Messaging Platform) khi khởi động lần đầu, nơi họ có thể chọn đồng ý với quảng cáo cá nhân hóa hoặc không cá nhân hóa.</li>
         <li>Để từ chối quảng cáo cá nhân hóa, hãy bật "Từ chối cá nhân hóa quảng cáo" hoặc đặt lại/xóa Mã quảng cáo của bạn trong <strong>Cài đặt thiết bị &gt; Google &gt; Quảng cáo</strong>.</li>
         <li>Bạn có thể gỡ quảng cáo trong một khoảng thời gian bằng xu trong cửa hàng của ứng dụng.</li>
+        <li>Các đối tác quảng cáo, bao gồm Meta Audience Network, hiển thị quảng cáo theo lựa chọn đồng ý này và chính sách của từng nhà cung cấp.</li>
       </ul>
 
       <h2>6. Lưu giữ và xóa dữ liệu</h2>
       <ul>
         <li><strong>Dữ liệu trên thiết bị:</strong> Gỡ cài đặt ứng dụng sẽ xóa ngay lập tức và vĩnh viễn toàn bộ dữ liệu học tập và cài đặt.</li>
         <li><strong>Dữ liệu AdMob/Firebase:</strong> Được xử lý và lưu giữ theo chính sách lưu giữ dữ liệu của Google.</li>
+        <li><strong>Dữ liệu đồng bộ đám mây:</strong> Nếu bạn dùng đăng nhập Google, dữ liệu được lưu trong Google Firebase cho đến khi bạn xóa tài khoản; theo yêu cầu, chúng tôi xóa tài khoản và toàn bộ dữ liệu đã đồng bộ. Cách yêu cầu xóa: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
       </ul>
 
       <h2>7. Quyền riêng tư của trẻ em</h2>
@@ -733,7 +871,7 @@
       <ul>
         <li>Dữ liệu trên thiết bị được lưu trong bộ nhớ riêng của ứng dụng (các ứng dụng khác không truy cập được)</li>
         <li>Việc truyền dữ liệu quảng cáo, thống kê và sự cố được mã hóa qua HTTPS</li>
-        <li>Chúng tôi không lưu trữ thông tin cá nhân trên máy chủ của riêng mình</li>
+        <li>Chúng tôi không vận hành máy chủ riêng; dữ liệu đồng bộ được lưu trong Google Firebase (Cloud Firestore) và truyền qua HTTPS</li>
       </ul>
 
       <h2>9. Thay đổi chính sách này</h2>
@@ -750,24 +888,25 @@
     <!-- ==================== ไทย ==================== -->
     <div id="section-th" class="section-th">
       <h1>นโยบายความเป็นส่วนตัว</h1>
-      <p class="subtitle">TOPIK Korean (เรียนภาษาเกาหลี) | วันที่มีผลบังคับใช้: 24 มิถุนายน 2026 | เวอร์ชัน 1.0</p>
+      <p class="subtitle">TOPIK Korean (เรียนภาษาเกาหลี) | วันที่มีผลบังคับใช้: 27 กันยายน 2026 | เวอร์ชัน 1.1</p>
 
       <p>RedMoon Studio ("บริษัท", "เรา") เป็นผู้ให้บริการแอปพลิเคชันมือถือ TOPIK Korean นโยบายความเป็นส่วนตัวนี้อธิบายวิธีจัดการข้อมูลเมื่อคุณใช้แอปของเรา</p>
 
       <div class="info-box">
-        <strong>สรุปสั้น ๆ:</strong> TOPIK Korean ไม่ต้องสมัครบัญชี และเราไม่ได้เก็บข้อมูลส่วนบุคคลโดยตรง อย่างไรก็ตาม เพื่อให้บริการแอปฟรีและปรับปรุงคุณภาพ เราใช้ <strong>Google AdMob (โฆษณา)</strong>, <strong>Firebase Analytics (สถิติการใช้งาน)</strong> และ <strong>Firebase Crashlytics (การวินิจฉัยข้อขัดข้อง)</strong> ซึ่งบริการเหล่านี้อาจเก็บตัวระบุโฆษณาและข้อมูลอุปกรณ์/การใช้งาน/การวินิจฉัย ข้อมูลการเรียนและการตั้งค่าของคุณจะถูกเก็บไว้บนอุปกรณ์ของคุณเท่านั้น
+        <strong>สรุป:</strong> TOPIK Korean ใช้งานได้ครบทุกฟีเจอร์โดยไม่ต้องสมัครสมาชิก และข้อมูลการเรียนกับการตั้งค่าจะถูกเก็บไว้ในอุปกรณ์ของคุณเป็นค่าเริ่มต้น เฉพาะเมื่อคุณต้องการเรียนต่อบนอุปกรณ์เครื่องอื่นเท่านั้น จึง<strong>เลือกลงชื่อเข้าใช้ด้วยบัญชี Google ได้</strong> ซึ่งความคืบหน้าในการเรียนและข้อมูลที่เกี่ยวข้องจะถูกจัดเก็บและซิงค์ผ่าน Google Firebase นอกจากนี้ เพื่อให้บริการแอปฟรีและปรับปรุงคุณภาพ เรายังใช้ <strong>Google AdMob และ Meta Audience Network (โฆษณา)</strong>, <strong>Firebase Analytics (สถิติการใช้งาน)</strong> และ <strong>Firebase Crashlytics (วินิจฉัยข้อผิดพลาด)</strong> ซึ่งอาจเก็บรหัสระบุตัวตนโฆษณาและข้อมูลอุปกรณ์ การใช้งาน และการวินิจฉัย
       </div>
 
       <h2>1. ข้อมูลที่เก็บรวบรวม</h2>
 
       <h3>1.1 ข้อมูลที่เราไม่ได้เก็บโดยตรง</h3>
       <ul>
-        <li>ข้อมูลระบุตัวบุคคล เช่น ชื่อ อีเมล หมายเลขโทรศัพท์ วันเกิด</li>
-        <li>ข้อมูลตำแหน่งที่ตั้ง (GPS)</li>
+        <li>ข้อมูลระบุตัวบุคคล เช่น ชื่อ หมายเลขโทรศัพท์ วันเกิด (เฉพาะเมื่อคุณเลือกใช้ฟีเจอร์เสริมคือการลงชื่อเข้าใช้ด้วย Google เท่านั้น จึงจะมีการประมวลผลอีเมล ชื่อที่แสดง และรหัสประจำตัวเฉพาะของบัญชี Google — ดูข้อ 3 ด้านล่าง)</li>
+        <li>ข้อมูลตำแหน่ง (GPS)</li>
         <li>รายชื่อผู้ติดต่อ ประวัติการโทร รูปภาพ/สื่อ</li>
+        <li>ไฟล์เสียงที่บันทึก (การรู้จำเสียงในการฝึกพูดดำเนินการโดยบริการรู้จำเสียงของอุปกรณ์ แอปไม่เก็บเสียงและไม่ส่งเสียงมาให้เรา)</li>
       </ul>
 
-      <h3>1.2 ข้อมูลที่เก็บไว้บนอุปกรณ์ของคุณเท่านั้น (ไม่ส่งมาที่เรา)</h3>
+      <h3>2. ข้อมูลที่เก็บไว้ในอุปกรณ์ (จะไม่ถูกส่งออกจากอุปกรณ์หากคุณไม่ใช้การลงชื่อเข้าใช้ Google และการซิงค์)</h3>
       <table>
         <thead><tr><th>ประเภทข้อมูล</th><th>วัตถุประสงค์</th><th>ที่จัดเก็บ</th></tr></thead>
         <tbody>
@@ -779,13 +918,28 @@
         </tbody>
       </table>
 
-      <h3>1.3 ข้อมูลที่เก็บโดย SDK ของบุคคลที่สาม</h3>
+      <h3>3. ฟีเจอร์เสริม: การลงชื่อเข้าใช้ Google และการซิงค์หลายอุปกรณ์ (Firebase Authentication · Cloud Firestore)</h3>
+      <p>ข้อมูลด้านล่างจะถูกเก็บใน Google Firebase เฉพาะเมื่อคุณลงชื่อเข้าใช้ด้วยบัญชี Google ในหน้าการตั้งค่าเท่านั้น หากไม่ลงชื่อเข้าใช้ จะไม่มีการส่งข้อมูลใด ๆ และเมื่อออกจากระบบ การซิงค์จะหยุด</p>
+      <table>
+        <thead><tr><th>รายการ</th><th>วัตถุประสงค์</th><th>สถานที่จัดเก็บ</th></tr></thead>
+        <tbody>
+          <tr><td>ข้อมูลบัญชี Google (อีเมล ชื่อที่แสดง รหัสประจำตัวเฉพาะ)</td><td>การลงชื่อเข้าใช้และการระบุบัญชี</td><td>Firebase Authentication</td></tr>
+          <tr><td>ความคืบหน้าและประวัติการทบทวน (SRS) รายการโปรด สถิติการเรียนรายวัน</td><td>เรียนต่อบนอุปกรณ์เครื่องอื่น</td><td>Cloud Firestore</td></tr>
+          <tr><td>การตั้งค่าบางส่วน (ระดับที่เรียน ธีม ภาษาของแอป การแจ้งเตือน ฯลฯ)</td><td>ให้การตั้งค่าตรงกันระหว่างอุปกรณ์</td><td>Cloud Firestore</td></tr>
+        </tbody>
+      </table>
+      <p>เหรียญ สถานะการซื้อ/สิทธิ์ และตัวนับที่เกี่ยวกับโฆษณาจะไม่ถูกซิงค์ สำหรับการลบข้อมูลที่จัดเก็บ ดูข้อ 6</p>
+
+      <h3>1.4 ข้อมูลที่เก็บโดย SDK ของบุคคลที่สาม</h3>
       <table>
         <thead><tr><th>บริการ</th><th>ข้อมูลที่เก็บ</th><th>วัตถุประสงค์</th></tr></thead>
         <tbody>
           <tr><td>Google AdMob</td><td>ตัวระบุโฆษณา (AAID), ที่อยู่ IP, ข้อมูลอุปกรณ์, ข้อมูลการโต้ตอบกับโฆษณา</td><td>การแสดงและการวัดผลโฆษณา</td></tr>
           <tr><td>Firebase Analytics (Google)</td><td>การดูหน้าจอ &amp; เวลาที่ใช้งาน, เหตุการณ์ในแอป, ภูมิภาคโดยประมาณ, ข้อมูลอุปกรณ์/ระบบปฏิบัติการ, ตัวระบุอินสแตนซ์แอปแบบไม่ระบุตัวตน</td><td>การวิเคราะห์การใช้งานและการปรับปรุงแอป</td></tr>
           <tr><td>Firebase Crashlytics (Google)</td><td>บันทึกข้อขัดข้อง, สแต็กเทรซ, สถานะอุปกรณ์, เวอร์ชันแอป, ตัวระบุการติดตั้งแบบไม่ระบุตัวตน</td><td>การปรับปรุงเสถียรภาพของแอป</td></tr>
+          <tr><td>Meta Audience Network (Meta Platforms)</td><td>รหัสระบุตัวตนโฆษณา (AAID) ที่อยู่ IP ข้อมูลอุปกรณ์ ข้อมูลการโต้ตอบกับโฆษณา</td><td>การแสดงและวัดผลโฆษณา (ผ่าน AdMob mediation)</td></tr>
+          <tr><td>Google Play Billing (Google)</td><td>ประวัติการซื้อและสถานะการชำระเงิน (ข้อมูลบัตรจะไม่ถูกส่งให้เรา)</td><td>ประมวลผลการชำระเงินแพ็กเกจพรีเมียม</td></tr>
+          <tr><td>Firebase Remote Config (Google)</td><td>รหัสระบุการติดตั้งแอป ข้อมูลอุปกรณ์</td><td>อัปเดตค่าของแอปจากระยะไกล เช่น ตารางสอบ</td></tr>
         </tbody>
       </table>
 
@@ -798,6 +952,8 @@
           <tr><td>รหัสโฆษณา (com.google.android.gms.permission.AD_ID)</td><td>เข้าถึงตัวระบุโฆษณา (โฆษณาที่ปรับให้เหมาะกับแต่ละบุคคล)</td></tr>
           <tr><td>การแจ้งเตือน (POST_NOTIFICATIONS)</td><td>แสดงการแจ้งเตือนการเรียนรายวันที่คุณตั้งไว้</td></tr>
           <tr><td>รับการบูตเสร็จสมบูรณ์ (RECEIVE_BOOT_COMPLETED)</td><td>กู้คืนการแจ้งเตือนการเรียนที่ตั้งเวลาไว้หลังรีบูต</td></tr>
+          <tr><td>ไมโครโฟน (RECORD_AUDIO)</td><td>การรู้จำเสียงในการฝึกพูด (ขอสิทธิ์เมื่อคุณใช้ฟีเจอร์นี้)</td></tr>
+          <tr><td>คงหน้าจอให้เปิดอยู่ (WAKE_LOCK)</td><td>ป้องกันหน้าจอดับระหว่างเรียนด้วยเสียงแบบแฮนด์ฟรี</td></tr>
         </tbody>
       </table>
 
@@ -807,6 +963,8 @@
         <li><strong>บริการฟรี:</strong> การแสดงโฆษณา (แบนเนอร์ / คั่นระหว่างหน้า / แบบมีรางวัล)</li>
         <li><strong>การปรับปรุงแอป:</strong> วิเคราะห์สถิติการใช้งานและการวินิจฉัยข้อขัดข้อง/ข้อผิดพลาด</li>
         <li><strong>สถิติของคุณ:</strong> แสดงภาพความคืบหน้าและผลการเรียนของคุณเอง</li>
+        <li><strong>การซิงค์หลายอุปกรณ์ (ทางเลือก):</strong> ซิงค์ความคืบหน้าและการตั้งค่ากับอุปกรณ์อื่นเมื่อลงชื่อเข้าใช้ด้วย Google</li>
+        <li><strong>การประมวลผลการชำระเงิน:</strong> ยืนยันการซื้อแพ็กเกจพรีเมียม</li>
       </ol>
 
       <h2>4. บริการของบุคคลที่สาม &amp; การแบ่งปัน</h2>
@@ -815,6 +973,7 @@
         <li>Google AdMob — <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a></li>
         <li>Google Ads (จัดการการปรับให้เหมาะกับบุคคล) — <a href="https://policies.google.com/technologies/ads" target="_blank">policies.google.com/technologies/ads</a></li>
         <li>Firebase (Analytics &amp; Crashlytics) — <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></li>
+        <li>Meta Audience Network — <a href="https://www.facebook.com/privacy/policy/" target="_blank">facebook.com/privacy/policy</a></li>
       </ul>
 
       <h2>5. โฆษณา &amp; ความยินยอม (GDPR/UMP)</h2>
@@ -822,12 +981,14 @@
         <li>ผู้ใช้ในเขตเศรษฐกิจยุโรป (EEA), สหราชอาณาจักร และสวิตเซอร์แลนด์ จะเห็นแบบฟอร์มความยินยอม Google UMP (User Messaging Platform) เมื่อเปิดแอปครั้งแรก ซึ่งสามารถเลือกยินยอมโฆษณาแบบปรับให้เหมาะกับบุคคลหรือแบบไม่ปรับได้</li>
         <li>หากไม่ต้องการโฆษณาที่ปรับให้เหมาะกับบุคคล ให้เปิด "เลือกไม่ใช้การปรับโฆษณาให้เหมาะกับฉัน" หรือรีเซ็ต/ลบรหัสโฆษณาของคุณใน <strong>การตั้งค่าอุปกรณ์ &gt; Google &gt; โฆษณา</strong></li>
         <li>คุณสามารถลบโฆษณาเป็นระยะเวลาหนึ่งได้โดยใช้เหรียญในร้านค้าภายในแอป</li>
+        <li>พันธมิตรโฆษณา รวมถึง Meta Audience Network จะแสดงโฆษณาตามตัวเลือกความยินยอมนี้และนโยบายของผู้ให้บริการแต่ละราย</li>
       </ul>
 
       <h2>6. การเก็บรักษาและการลบข้อมูล</h2>
       <ul>
         <li><strong>ข้อมูลในเครื่อง:</strong> การถอนการติดตั้งแอปจะลบข้อมูลการเรียนและการตั้งค่าทั้งหมดทันทีและถาวร</li>
         <li><strong>ข้อมูล AdMob/Firebase:</strong> ประมวลผลและเก็บรักษาตามนโยบายการเก็บรักษาข้อมูลของ Google</li>
+        <li><strong>ข้อมูลซิงค์บนคลาวด์:</strong> หากคุณใช้การลงชื่อเข้าใช้ Google ข้อมูลจะถูกเก็บไว้ใน Google Firebase จนกว่าคุณจะลบบัญชี และเมื่อมีคำขอ เราจะลบบัญชีและข้อมูลที่ซิงค์ทั้งหมด วิธีขอลบ: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
       </ul>
 
       <h2>7. ความเป็นส่วนตัวของเด็ก</h2>
@@ -837,7 +998,7 @@
       <ul>
         <li>ข้อมูลในเครื่องถูกเก็บไว้ในพื้นที่จัดเก็บส่วนตัวของแอป (แอปอื่นเข้าถึงไม่ได้)</li>
         <li>การส่งข้อมูลโฆษณา สถิติ และข้อขัดข้องถูกเข้ารหัสผ่าน HTTPS</li>
-        <li>เราไม่จัดเก็บข้อมูลส่วนบุคคลบนเซิร์ฟเวอร์ของเราเอง</li>
+        <li>เราไม่ได้ดำเนินการเซิร์ฟเวอร์ของเราเอง ข้อมูลที่ซิงค์จัดเก็บใน Google Firebase (Cloud Firestore) และส่งผ่าน HTTPS</li>
       </ul>
 
       <h2>9. การเปลี่ยนแปลงนโยบายนี้</h2>
