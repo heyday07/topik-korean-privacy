@@ -193,13 +193,11 @@
       <table>
         <thead><tr><th>권한</th><th>사용 목적</th></tr></thead>
         <tbody>
-          <tr><td>인터넷 (INTERNET)</td><td>광고 로드, 통계·오류 보고서 전송</td></tr>
-          <tr><td>네트워크 상태 (ACCESS_NETWORK_STATE)</td><td>광고 표시를 위한 연결 상태 확인</td></tr>
-          <tr><td>광고 ID (com.google.android.gms.permission.AD_ID)</td><td>광고 식별자 접근(맞춤형 광고)</td></tr>
-          <tr><td>알림 (POST_NOTIFICATIONS)</td><td>사용자가 설정한 일일 학습 알림 표시</td></tr>
-          <tr><td>부팅 완료 수신 (RECEIVE_BOOT_COMPLETED)</td><td>재부팅 후 예약된 학습 알림 복원</td></tr>
-          <tr><td>마이크 (RECORD_AUDIO)</td><td>말하기 연습의 음성 인식 (기능 사용 시 권한 요청)</td></tr>
-          <tr><td>화면 켜짐 유지 (WAKE_LOCK)</td><td>핸즈프리 오디오 학습 중 화면 꺼짐 방지</td></tr>
+          <tr><td>인터넷 연결</td><td>광고 로드, 통계·오류 보고서 전송, 앱 설정 원격 갱신 (별도 동의 불필요)</td></tr>
+          <tr><td>맞춤형 광고 식별자</td><td>광고 게재 최적화 — Android: 광고 ID 권한 / iOS: 앱 추적 투명성(ATT) 동의</td></tr>
+          <tr><td>알림</td><td>사용자가 설정한 일일 학습 알림 표시(기기 재시작 후 자동 복원 포함), 알림 권한 요청</td></tr>
+          <tr><td>마이크</td><td>말하기 연습의 음성 인식 (기능 사용 시 권한 요청)</td></tr>
+          <tr><td>백그라운드 오디오 재생</td><td>핸즈프리 학습 중 화면이 꺼져도 재생 유지 — Android: 화면 켜짐 유지 권한 / iOS: 백그라운드 오디오 모드(별도 동의 불필요)</td></tr>
         </tbody>
       </table>
 
@@ -325,13 +323,11 @@
       <table>
         <thead><tr><th>Permission</th><th>Purpose</th></tr></thead>
         <tbody>
-          <tr><td>Internet (INTERNET)</td><td>Load ads, send analytics and crash reports</td></tr>
-          <tr><td>Network State (ACCESS_NETWORK_STATE)</td><td>Check connectivity for ads</td></tr>
-          <tr><td>Advertising ID (com.google.android.gms.permission.AD_ID)</td><td>Access advertising identifier (personalized ads)</td></tr>
-          <tr><td>Notifications (POST_NOTIFICATIONS)</td><td>Show the daily study reminder you set</td></tr>
-          <tr><td>Boot Completed (RECEIVE_BOOT_COMPLETED)</td><td>Restore scheduled study reminders after reboot</td></tr>
-          <tr><td>Microphone (RECORD_AUDIO)</td><td>Speech recognition in speaking practice (requested when you use the feature)</td></tr>
-          <tr><td>Keep Awake (WAKE_LOCK)</td><td>Prevent the screen from turning off during hands-free audio study</td></tr>
+          <tr><td>Internet Access</td><td>Load ads, send analytics and crash reports, remotely update app settings (no separate consent required)</td></tr>
+          <tr><td>Personalized Advertising Identifier</td><td>Optimize ad delivery — Android: Advertising ID permission / iOS: App Tracking Transparency (ATT) consent</td></tr>
+          <tr><td>Notifications</td><td>Show the daily study reminder you set (including automatic restoration after device restart); notification permission requested</td></tr>
+          <tr><td>Microphone</td><td>Speech recognition in speaking practice (requested when you use the feature)</td></tr>
+          <tr><td>Background Audio Playback</td><td>Keep audio playing during hands-free study even with the screen off — Android: Keep Awake permission / iOS: Background Audio mode (no separate consent required)</td></tr>
         </tbody>
       </table>
 
@@ -452,13 +448,11 @@
       <table>
         <thead><tr><th>権限</th><th>使用目的</th></tr></thead>
         <tbody>
-          <tr><td>インターネット (INTERNET)</td><td>広告の読み込み、統計・クラッシュレポートの送信</td></tr>
-          <tr><td>ネットワーク状態 (ACCESS_NETWORK_STATE)</td><td>広告表示のための接続状態確認</td></tr>
-          <tr><td>広告ID (com.google.android.gms.permission.AD_ID)</td><td>広告識別子へのアクセス(パーソナライズ広告)</td></tr>
-          <tr><td>通知 (POST_NOTIFICATIONS)</td><td>ユーザーが設定した毎日の学習リマインダーの表示</td></tr>
-          <tr><td>起動完了の受信 (RECEIVE_BOOT_COMPLETED)</td><td>再起動後に予約された学習リマインダーの復元</td></tr>
-          <tr><td>マイク (RECORD_AUDIO)</td><td>スピーキング練習の音声認識(機能の使用時に許可を要求)</td></tr>
-          <tr><td>画面オン維持 (WAKE_LOCK)</td><td>ハンズフリー音声学習中の画面消灯を防止</td></tr>
+          <tr><td>インターネット接続</td><td>広告の読み込み、統計・クラッシュレポートの送信、アプリ設定のリモート更新(別途同意不要)</td></tr>
+          <tr><td>パーソナライズ広告識別子</td><td>広告配信の最適化 — Android: 広告ID権限 / iOS: アプリのトラッキング透明性(ATT)への同意</td></tr>
+          <tr><td>通知</td><td>ユーザーが設定した毎日の学習リマインダーの表示(端末再起動後の自動復元を含む)、通知の許可を要求</td></tr>
+          <tr><td>マイク</td><td>スピーキング練習の音声認識(機能の使用時に許可を要求)</td></tr>
+          <tr><td>バックグラウンド音声再生</td><td>ハンズフリー学習中、画面が消えても再生を継続 — Android: 画面オン維持権限 / iOS: バックグラウンドオーディオモード(別途同意不要)</td></tr>
         </tbody>
       </table>
 
@@ -579,13 +573,11 @@
       <table>
         <thead><tr><th>权限</th><th>使用目的</th></tr></thead>
         <tbody>
-          <tr><td>互联网 (INTERNET)</td><td>加载广告、发送统计与崩溃报告</td></tr>
-          <tr><td>网络状态 (ACCESS_NETWORK_STATE)</td><td>检查广告所需的连接状态</td></tr>
-          <tr><td>广告 ID (com.google.android.gms.permission.AD_ID)</td><td>访问广告标识符(个性化广告)</td></tr>
-          <tr><td>通知 (POST_NOTIFICATIONS)</td><td>显示您设置的每日学习提醒</td></tr>
-          <tr><td>接收启动完成 (RECEIVE_BOOT_COMPLETED)</td><td>重启后恢复已预约的学习提醒</td></tr>
-          <tr><td>麦克风 (RECORD_AUDIO)</td><td>口语练习中的语音识别(使用该功能时请求授权)</td></tr>
-          <tr><td>保持屏幕常亮 (WAKE_LOCK)</td><td>免提音频学习时防止屏幕熄灭</td></tr>
+          <tr><td>互联网连接</td><td>加载广告、发送统计与崩溃报告、远程更新应用设置(无需另行同意)</td></tr>
+          <tr><td>个性化广告标识符</td><td>优化广告投放 — Android:广告ID权限 / iOS:App 跟踪透明度(ATT)同意</td></tr>
+          <tr><td>通知</td><td>显示您设置的每日学习提醒(含设备重启后自动恢复),需请求通知权限</td></tr>
+          <tr><td>麦克风</td><td>口语练习中的语音识别(使用该功能时请求授权)</td></tr>
+          <tr><td>后台音频播放</td><td>免提学习时即使屏幕熄灭也保持播放 — Android:保持屏幕常亮权限 / iOS:后台音频模式(无需另行同意)</td></tr>
         </tbody>
       </table>
 
@@ -706,13 +698,11 @@
       <table>
         <thead><tr><th>權限</th><th>使用目的</th></tr></thead>
         <tbody>
-          <tr><td>網際網路 (INTERNET)</td><td>載入廣告、傳送統計與當機報告</td></tr>
-          <tr><td>網路狀態 (ACCESS_NETWORK_STATE)</td><td>檢查廣告所需的連線狀態</td></tr>
-          <tr><td>廣告 ID (com.google.android.gms.permission.AD_ID)</td><td>存取廣告識別碼(個人化廣告)</td></tr>
-          <tr><td>通知 (POST_NOTIFICATIONS)</td><td>顯示您設定的每日學習提醒</td></tr>
-          <tr><td>接收開機完成 (RECEIVE_BOOT_COMPLETED)</td><td>重新開機後還原已排程的學習提醒</td></tr>
-          <tr><td>麥克風 (RECORD_AUDIO)</td><td>口說練習中的語音辨識(使用該功能時請求授權)</td></tr>
-          <tr><td>保持螢幕開啟 (WAKE_LOCK)</td><td>免持音訊學習時避免螢幕熄滅</td></tr>
+          <tr><td>網際網路連線</td><td>載入廣告、傳送統計與當機報告、遠端更新應用程式設定(無需另行同意)</td></tr>
+          <tr><td>個人化廣告識別碼</td><td>優化廣告投放 — Android:廣告 ID 權限 / iOS:App 追蹤透明度(ATT)同意</td></tr>
+          <tr><td>通知</td><td>顯示您設定的每日學習提醒(含裝置重新開機後自動還原),需要求通知權限</td></tr>
+          <tr><td>麥克風</td><td>口說練習中的語音辨識(使用該功能時請求授權)</td></tr>
+          <tr><td>背景音訊播放</td><td>免持學習時即使螢幕熄滅也維持播放 — Android:保持螢幕開啟權限 / iOS:背景音訊模式(無需另行同意)</td></tr>
         </tbody>
       </table>
 
@@ -833,13 +823,11 @@
       <table>
         <thead><tr><th>Quyền</th><th>Mục đích</th></tr></thead>
         <tbody>
-          <tr><td>Internet (INTERNET)</td><td>Tải quảng cáo, gửi báo cáo thống kê và sự cố</td></tr>
-          <tr><td>Trạng thái mạng (ACCESS_NETWORK_STATE)</td><td>Kiểm tra kết nối cho quảng cáo</td></tr>
-          <tr><td>Mã quảng cáo (com.google.android.gms.permission.AD_ID)</td><td>Truy cập mã nhận dạng quảng cáo (quảng cáo cá nhân hóa)</td></tr>
-          <tr><td>Thông báo (POST_NOTIFICATIONS)</td><td>Hiển thị lời nhắc học hằng ngày bạn đã đặt</td></tr>
-          <tr><td>Nhận khởi động hoàn tất (RECEIVE_BOOT_COMPLETED)</td><td>Khôi phục lời nhắc học đã lên lịch sau khi khởi động lại</td></tr>
-          <tr><td>Micrô (RECORD_AUDIO)</td><td>Nhận dạng giọng nói trong luyện nói (yêu cầu quyền khi bạn dùng tính năng)</td></tr>
-          <tr><td>Giữ màn hình sáng (WAKE_LOCK)</td><td>Ngăn màn hình tắt khi học bằng âm thanh rảnh tay</td></tr>
+          <tr><td>Kết nối Internet</td><td>Tải quảng cáo, gửi báo cáo thống kê và sự cố, cập nhật từ xa cài đặt ứng dụng (không cần đồng ý riêng)</td></tr>
+          <tr><td>Mã nhận dạng quảng cáo cá nhân hóa</td><td>Tối ưu hóa hiển thị quảng cáo — Android: quyền Mã quảng cáo / iOS: sự đồng ý Minh bạch theo dõi ứng dụng (ATT)</td></tr>
+          <tr><td>Thông báo</td><td>Hiển thị lời nhắc học hằng ngày bạn đã đặt (bao gồm tự động khôi phục sau khi khởi động lại thiết bị), yêu cầu quyền thông báo</td></tr>
+          <tr><td>Micrô</td><td>Nhận dạng giọng nói trong luyện nói (yêu cầu quyền khi bạn dùng tính năng)</td></tr>
+          <tr><td>Phát âm thanh nền</td><td>Giữ âm thanh phát khi học rảnh tay ngay cả khi màn hình tắt — Android: quyền Giữ màn hình sáng / iOS: chế độ Âm thanh nền (không cần đồng ý riêng)</td></tr>
         </tbody>
       </table>
 
@@ -960,13 +948,11 @@
       <table>
         <thead><tr><th>สิทธิ์</th><th>วัตถุประสงค์</th></tr></thead>
         <tbody>
-          <tr><td>อินเทอร์เน็ต (INTERNET)</td><td>โหลดโฆษณา, ส่งรายงานสถิติและข้อขัดข้อง</td></tr>
-          <tr><td>สถานะเครือข่าย (ACCESS_NETWORK_STATE)</td><td>ตรวจสอบการเชื่อมต่อสำหรับโฆษณา</td></tr>
-          <tr><td>รหัสโฆษณา (com.google.android.gms.permission.AD_ID)</td><td>เข้าถึงตัวระบุโฆษณา (โฆษณาที่ปรับให้เหมาะกับแต่ละบุคคล)</td></tr>
-          <tr><td>การแจ้งเตือน (POST_NOTIFICATIONS)</td><td>แสดงการแจ้งเตือนการเรียนรายวันที่คุณตั้งไว้</td></tr>
-          <tr><td>รับการบูตเสร็จสมบูรณ์ (RECEIVE_BOOT_COMPLETED)</td><td>กู้คืนการแจ้งเตือนการเรียนที่ตั้งเวลาไว้หลังรีบูต</td></tr>
-          <tr><td>ไมโครโฟน (RECORD_AUDIO)</td><td>การรู้จำเสียงในการฝึกพูด (ขอสิทธิ์เมื่อคุณใช้ฟีเจอร์นี้)</td></tr>
-          <tr><td>คงหน้าจอให้เปิดอยู่ (WAKE_LOCK)</td><td>ป้องกันหน้าจอดับระหว่างเรียนด้วยเสียงแบบแฮนด์ฟรี</td></tr>
+          <tr><td>การเชื่อมต่ออินเทอร์เน็ต</td><td>โหลดโฆษณา ส่งรายงานสถิติและข้อขัดข้อง อัปเดตการตั้งค่าแอปจากระยะไกล (ไม่ต้องขอความยินยอมแยกต่างหาก)</td></tr>
+          <tr><td>ตัวระบุโฆษณาแบบปรับให้เหมาะกับแต่ละบุคคล</td><td>เพิ่มประสิทธิภาพการแสดงโฆษณา — Android: สิทธิ์รหัสโฆษณา / iOS: ความยินยอมความโปร่งใสในการติดตามแอป (ATT)</td></tr>
+          <tr><td>การแจ้งเตือน</td><td>แสดงการแจ้งเตือนการเรียนรายวันที่คุณตั้งไว้ (รวมถึงการกู้คืนอัตโนมัติหลังรีบูตเครื่อง) ขอสิทธิ์การแจ้งเตือน</td></tr>
+          <tr><td>ไมโครโฟน</td><td>การรู้จำเสียงในการฝึกพูด (ขอสิทธิ์เมื่อคุณใช้ฟีเจอร์นี้)</td></tr>
+          <tr><td>การเล่นเสียงพื้นหลัง</td><td>คงการเล่นเสียงระหว่างเรียนแบบแฮนด์ฟรีแม้หน้าจอดับ — Android: สิทธิ์คงหน้าจอให้เปิดอยู่ / iOS: โหมดเสียงพื้นหลัง (ไม่ต้องขอความยินยอมแยกต่างหาก)</td></tr>
         </tbody>
       </table>
 
@@ -1087,13 +1073,11 @@
       <table>
         <thead><tr><th>Izin</th><th>Tujuan</th></tr></thead>
         <tbody>
-          <tr><td>Internet (INTERNET)</td><td>Memuat iklan, mengirim laporan analitik dan kerusakan</td></tr>
-          <tr><td>Status Jaringan (ACCESS_NETWORK_STATE)</td><td>Memeriksa konektivitas untuk iklan</td></tr>
-          <tr><td>ID Iklan (com.google.android.gms.permission.AD_ID)</td><td>Mengakses pengenal iklan (iklan yang dipersonalisasi)</td></tr>
-          <tr><td>Notifikasi (POST_NOTIFICATIONS)</td><td>Menampilkan pengingat belajar harian yang Anda atur</td></tr>
-          <tr><td>Boot Selesai (RECEIVE_BOOT_COMPLETED)</td><td>Memulihkan pengingat belajar terjadwal setelah perangkat dinyalakan ulang</td></tr>
-          <tr><td>Mikrofon (RECORD_AUDIO)</td><td>Pengenalan suara pada latihan berbicara (diminta saat Anda menggunakan fitur ini)</td></tr>
-          <tr><td>Tetap Menyala (WAKE_LOCK)</td><td>Mencegah layar mati saat belajar audio tanpa tangan</td></tr>
+          <tr><td>Akses Internet</td><td>Memuat iklan, mengirim laporan analitik dan kerusakan, memperbarui pengaturan aplikasi dari jarak jauh (tidak memerlukan persetujuan terpisah)</td></tr>
+          <tr><td>ID Iklan yang Dipersonalisasi</td><td>Mengoptimalkan penayangan iklan — Android: izin ID Iklan / iOS: persetujuan App Tracking Transparency (ATT)</td></tr>
+          <tr><td>Notifikasi</td><td>Menampilkan pengingat belajar harian yang Anda atur (termasuk pemulihan otomatis setelah perangkat dinyalakan ulang), meminta izin notifikasi</td></tr>
+          <tr><td>Mikrofon</td><td>Pengenalan suara pada latihan berbicara (diminta saat Anda menggunakan fitur ini)</td></tr>
+          <tr><td>Pemutaran Audio Latar Belakang</td><td>Menjaga audio tetap diputar saat belajar tanpa tangan meski layar mati — Android: izin Tetap Menyala / iOS: mode Audio Latar Belakang (tidak memerlukan persetujuan terpisah)</td></tr>
         </tbody>
       </table>
 
@@ -1214,13 +1198,11 @@
       <table>
         <thead><tr><th>Permiso</th><th>Finalidad</th></tr></thead>
         <tbody>
-          <tr><td>Internet (INTERNET)</td><td>Cargar anuncios, enviar análisis e informes de fallos</td></tr>
-          <tr><td>Estado de la red (ACCESS_NETWORK_STATE)</td><td>Comprobar la conectividad para los anuncios</td></tr>
-          <tr><td>ID de publicidad (com.google.android.gms.permission.AD_ID)</td><td>Acceder al identificador de publicidad (anuncios personalizados)</td></tr>
-          <tr><td>Notificaciones (POST_NOTIFICATIONS)</td><td>Mostrar el recordatorio de estudio diario que usted configure</td></tr>
-          <tr><td>Arranque completado (RECEIVE_BOOT_COMPLETED)</td><td>Restaurar los recordatorios de estudio programados tras reiniciar</td></tr>
-          <tr><td>Micrófono (RECORD_AUDIO)</td><td>Reconocimiento de voz en la práctica oral (se solicita al usar la función)</td></tr>
-          <tr><td>Mantener activa la pantalla (WAKE_LOCK)</td><td>Evitar que la pantalla se apague durante el estudio de audio con manos libres</td></tr>
+          <tr><td>Acceso a Internet</td><td>Cargar anuncios, enviar análisis e informes de fallos, actualizar de forma remota la configuración de la app (no requiere consentimiento aparte)</td></tr>
+          <tr><td>Identificador de publicidad personalizada</td><td>Optimizar la publicación de anuncios — Android: permiso de ID de publicidad / iOS: consentimiento de Transparencia de Seguimiento de Apps (ATT)</td></tr>
+          <tr><td>Notificaciones</td><td>Mostrar el recordatorio de estudio diario que usted configure (incluye restauración automática tras reiniciar el dispositivo); se solicita permiso de notificaciones</td></tr>
+          <tr><td>Micrófono</td><td>Reconocimiento de voz en la práctica oral (se solicita al usar la función)</td></tr>
+          <tr><td>Reproducción de audio en segundo plano</td><td>Mantener el audio reproduciéndose durante el estudio con manos libres aunque la pantalla esté apagada — Android: permiso Mantener activa la pantalla / iOS: modo de audio en segundo plano (no requiere consentimiento aparte)</td></tr>
         </tbody>
       </table>
 
@@ -1341,13 +1323,11 @@
       <table>
         <thead><tr><th>Kebenaran</th><th>Tujuan</th></tr></thead>
         <tbody>
-          <tr><td>Internet (INTERNET)</td><td>Muatkan iklan, hantar analitik dan laporan ranap</td></tr>
-          <tr><td>Keadaan Rangkaian (ACCESS_NETWORK_STATE)</td><td>Semak ketersambungan untuk iklan</td></tr>
-          <tr><td>ID Pengiklanan (com.google.android.gms.permission.AD_ID)</td><td>Akses pengecam pengiklanan (iklan diperibadikan)</td></tr>
-          <tr><td>Pemberitahuan (POST_NOTIFICATIONS)</td><td>Paparkan peringatan belajar harian yang anda tetapkan</td></tr>
-          <tr><td>But Selesai (RECEIVE_BOOT_COMPLETED)</td><td>Pulihkan peringatan belajar berjadual selepas but semula</td></tr>
-          <tr><td>Mikrofon (RECORD_AUDIO)</td><td>Pengecaman suara dalam latihan bertutur (diminta apabila anda menggunakan ciri ini)</td></tr>
-          <tr><td>Kekalkan Skrin Hidup (WAKE_LOCK)</td><td>Mengelakkan skrin padam semasa belajar audio tanpa tangan</td></tr>
+          <tr><td>Akses Internet</td><td>Memuatkan iklan, menghantar analitik dan laporan ranap, mengemas kini tetapan aplikasi dari jauh (tidak memerlukan persetujuan berasingan)</td></tr>
+          <tr><td>Pengecam Pengiklanan Diperibadikan</td><td>Mengoptimumkan penyampaian iklan — Android: kebenaran ID Pengiklanan / iOS: persetujuan Ketelusan Penjejakan Aplikasi (ATT)</td></tr>
+          <tr><td>Pemberitahuan</td><td>Memaparkan peringatan belajar harian yang anda tetapkan (termasuk pemulihan automatik selepas but semula peranti), meminta kebenaran pemberitahuan</td></tr>
+          <tr><td>Mikrofon</td><td>Pengecaman suara dalam latihan bertutur (diminta apabila anda menggunakan ciri ini)</td></tr>
+          <tr><td>Main Balik Audio Latar Belakang</td><td>Mengekalkan audio bermain semasa belajar tanpa tangan walaupun skrin padam — Android: kebenaran Kekalkan Skrin Hidup / iOS: mod Audio Latar Belakang (tidak memerlukan persetujuan berasingan)</td></tr>
         </tbody>
       </table>
 
@@ -1468,13 +1448,11 @@
       <table>
         <thead><tr><th>Permissão</th><th>Finalidade</th></tr></thead>
         <tbody>
-          <tr><td>Internet (INTERNET)</td><td>Carregar anúncios, enviar análises e relatórios de falhas</td></tr>
-          <tr><td>Estado da Rede (ACCESS_NETWORK_STATE)</td><td>Verificar a conectividade para anúncios</td></tr>
-          <tr><td>ID de Publicidade (com.google.android.gms.permission.AD_ID)</td><td>Acessar o identificador de publicidade (anúncios personalizados)</td></tr>
-          <tr><td>Notificações (POST_NOTIFICATIONS)</td><td>Exibir o lembrete diário de estudo que você definiu</td></tr>
-          <tr><td>Inicialização Concluída (RECEIVE_BOOT_COMPLETED)</td><td>Restaurar os lembretes de estudo agendados após a reinicialização</td></tr>
-          <tr><td>Microfone (RECORD_AUDIO)</td><td>Reconhecimento de voz na prática de fala (solicitado quando você usa o recurso)</td></tr>
-          <tr><td>Manter tela ativa (WAKE_LOCK)</td><td>Evitar que a tela desligue durante o estudo por áudio com as mãos livres</td></tr>
+          <tr><td>Acesso à Internet</td><td>Carregar anúncios, enviar análises e relatórios de falhas, atualizar remotamente as configurações do app (não requer consentimento separado)</td></tr>
+          <tr><td>Identificador de Publicidade Personalizada</td><td>Otimizar a veiculação de anúncios — Android: permissão de ID de Publicidade / iOS: consentimento de Transparência de Rastreamento de Apps (ATT)</td></tr>
+          <tr><td>Notificações</td><td>Exibir o lembrete diário de estudo que você definiu (incluindo restauração automática após reiniciar o dispositivo); solicita permissão de notificações</td></tr>
+          <tr><td>Microfone</td><td>Reconhecimento de voz na prática de fala (solicitado quando você usa o recurso)</td></tr>
+          <tr><td>Reprodução de Áudio em Segundo Plano</td><td>Manter o áudio tocando durante o estudo com as mãos livres mesmo com a tela desligada — Android: permissão Manter tela ativa / iOS: modo de Áudio em Segundo Plano (não requer consentimento separado)</td></tr>
         </tbody>
       </table>
 
@@ -1595,13 +1573,11 @@
       <table>
         <thead><tr><th>Berechtigung</th><th>Zweck</th></tr></thead>
         <tbody>
-          <tr><td>Internet (INTERNET)</td><td>Werbung laden, Analyse- und Absturzberichte senden</td></tr>
-          <tr><td>Netzwerkstatus (ACCESS_NETWORK_STATE)</td><td>Konnektivität für Werbung prüfen</td></tr>
-          <tr><td>Werbe-ID (com.google.android.gms.permission.AD_ID)</td><td>Zugriff auf die Werbekennung (personalisierte Werbung)</td></tr>
-          <tr><td>Benachrichtigungen (POST_NOTIFICATIONS)</td><td>Die von Ihnen eingestellte tägliche Lernerinnerung anzeigen</td></tr>
-          <tr><td>Systemstart abgeschlossen (RECEIVE_BOOT_COMPLETED)</td><td>Geplante Lernerinnerungen nach einem Neustart wiederherstellen</td></tr>
-          <tr><td>Mikrofon (RECORD_AUDIO)</td><td>Spracherkennung in der Sprechübung (wird bei Nutzung der Funktion angefragt)</td></tr>
-          <tr><td>Bildschirm aktiv halten (WAKE_LOCK)</td><td>Verhindert, dass sich der Bildschirm beim freihändigen Audiolernen abschaltet</td></tr>
+          <tr><td>Internetzugriff</td><td>Werbung laden, Analyse- und Absturzberichte senden, App-Einstellungen aus der Ferne aktualisieren (keine gesonderte Einwilligung erforderlich)</td></tr>
+          <tr><td>Personalisierte Werbekennung</td><td>Optimierung der Werbeauslieferung — Android: Werbe-ID-Berechtigung / iOS: Einwilligung zur App-Tracking-Transparenz (ATT)</td></tr>
+          <tr><td>Benachrichtigungen</td><td>Zeigt die von Ihnen eingestellte tägliche Lernerinnerung an (inkl. automatischer Wiederherstellung nach einem Geräteneustart), Benachrichtigungsberechtigung wird angefragt</td></tr>
+          <tr><td>Mikrofon</td><td>Spracherkennung in der Sprechübung (wird bei Nutzung der Funktion angefragt)</td></tr>
+          <tr><td>Hintergrund-Audiowiedergabe</td><td>Hält die Audiowiedergabe beim freihändigen Lernen auch bei ausgeschaltetem Bildschirm aufrecht — Android: Berechtigung „Bildschirm aktiv halten“ / iOS: Hintergrundaudio-Modus (keine gesonderte Einwilligung erforderlich)</td></tr>
         </tbody>
       </table>
 
@@ -1722,13 +1698,11 @@
       <table>
         <thead><tr><th>Autorisation</th><th>Objet</th></tr></thead>
         <tbody>
-          <tr><td>Internet (INTERNET)</td><td>Charger les publicités, envoyer les données d'analyse et les rapports de plantage</td></tr>
-          <tr><td>État du réseau (ACCESS_NETWORK_STATE)</td><td>Vérifier la connectivité pour les publicités</td></tr>
-          <tr><td>Identifiant publicitaire (com.google.android.gms.permission.AD_ID)</td><td>Accéder à l'identifiant publicitaire (publicités personnalisées)</td></tr>
-          <tr><td>Notifications (POST_NOTIFICATIONS)</td><td>Afficher le rappel d'étude quotidien que vous avez défini</td></tr>
-          <tr><td>Démarrage terminé (RECEIVE_BOOT_COMPLETED)</td><td>Restaurer les rappels d'étude programmés après le redémarrage</td></tr>
-          <tr><td>Microphone (RECORD_AUDIO)</td><td>Reconnaissance vocale dans l'entraînement à l'oral (demandée lorsque vous utilisez la fonction)</td></tr>
-          <tr><td>Maintien de l'écran allumé (WAKE_LOCK)</td><td>Empêcher l'écran de s'éteindre pendant l'étude audio mains libres</td></tr>
+          <tr><td>Accès à Internet</td><td>Charger les publicités, envoyer les données d'analyse et les rapports de plantage, mettre à jour à distance les paramètres de l'application (aucun consentement distinct requis)</td></tr>
+          <tr><td>Identifiant publicitaire personnalisé</td><td>Optimiser la diffusion des publicités — Android : autorisation Identifiant publicitaire / iOS : consentement Transparence du suivi des applications (ATT)</td></tr>
+          <tr><td>Notifications</td><td>Afficher le rappel d'étude quotidien que vous avez défini (y compris la restauration automatique après redémarrage de l'appareil), autorisation de notifications demandée</td></tr>
+          <tr><td>Microphone</td><td>Reconnaissance vocale dans l'entraînement à l'oral (demandée lorsque vous utilisez la fonction)</td></tr>
+          <tr><td>Lecture audio en arrière-plan</td><td>Maintient la lecture audio pendant l'étude mains libres même écran éteint — Android : autorisation Maintien de l'écran allumé / iOS : mode Audio en arrière-plan (aucun consentement distinct requis)</td></tr>
         </tbody>
       </table>
 
@@ -1849,13 +1823,11 @@
       <table>
         <thead><tr><th>Разрешение</th><th>Назначение</th></tr></thead>
         <tbody>
-          <tr><td>Интернет (INTERNET)</td><td>Загрузка рекламы, отправка аналитических данных и отчётов о сбоях</td></tr>
-          <tr><td>Состояние сети (ACCESS_NETWORK_STATE)</td><td>Проверка подключения для рекламы</td></tr>
-          <tr><td>Рекламный идентификатор (com.google.android.gms.permission.AD_ID)</td><td>Доступ к рекламному идентификатору (персонализированная реклама)</td></tr>
-          <tr><td>Уведомления (POST_NOTIFICATIONS)</td><td>Показ установленного вами ежедневного напоминания об учёбе</td></tr>
-          <tr><td>Завершение загрузки (RECEIVE_BOOT_COMPLETED)</td><td>Восстановление запланированных напоминаний об учёбе после перезагрузки</td></tr>
-          <tr><td>Микрофон (RECORD_AUDIO)</td><td>Распознавание речи в упражнении по говорению (запрашивается при использовании функции)</td></tr>
-          <tr><td>Не выключать экран (WAKE_LOCK)</td><td>Предотвращает выключение экрана при обучении на слух без рук</td></tr>
+          <tr><td>Доступ в Интернет</td><td>Загрузка рекламы, отправка аналитических данных и отчётов о сбоях, удалённое обновление настроек приложения (отдельное согласие не требуется)</td></tr>
+          <tr><td>Персонализированный рекламный идентификатор</td><td>Оптимизация показа рекламы — Android: разрешение на рекламный идентификатор / iOS: согласие на прозрачность отслеживания приложений (ATT)</td></tr>
+          <tr><td>Уведомления</td><td>Показ установленного вами ежедневного напоминания об учёбе (включая автоматическое восстановление после перезагрузки устройства), запрашивается разрешение на уведомления</td></tr>
+          <tr><td>Микрофон</td><td>Распознавание речи в упражнении по говорению (запрашивается при использовании функции)</td></tr>
+          <tr><td>Фоновое воспроизведение аудио</td><td>Продолжает воспроизведение звука при обучении без помощи рук, даже когда экран выключен — Android: разрешение «Не выключать экран» / iOS: режим фонового аудио (отдельное согласие не требуется)</td></tr>
         </tbody>
       </table>
 
@@ -1976,13 +1948,11 @@
       <table>
         <thead><tr><th>الإذن</th><th>الغرض</th></tr></thead>
         <tbody>
-          <tr><td>الإنترنت (<bdi>INTERNET</bdi>)</td><td>تحميل الإعلانات وإرسال تقارير التحليلات والأعطال</td></tr>
-          <tr><td>حالة الشبكة (<bdi>ACCESS_NETWORK_STATE</bdi>)</td><td>التحقق من الاتصال لعرض الإعلانات</td></tr>
-          <tr><td>معرّف الإعلانات (<bdi>com.google.android.gms.permission.AD_ID</bdi>)</td><td>الوصول إلى معرّف الإعلانات (الإعلانات المخصّصة)</td></tr>
-          <tr><td>الإشعارات (<bdi>POST_NOTIFICATIONS</bdi>)</td><td>عرض تذكير الدراسة اليومي الذي حدّدته</td></tr>
-          <tr><td>اكتمال التشغيل (<bdi>RECEIVE_BOOT_COMPLETED</bdi>)</td><td>استعادة تذكيرات الدراسة المجدولة بعد إعادة التشغيل</td></tr>
-          <tr><td>الميكروفون (<bdi>RECORD_AUDIO</bdi>)</td><td>التعرّف على الكلام في تمرين المحادثة (يُطلب عند استخدام الميزة)</td></tr>
-          <tr><td>إبقاء الشاشة مضاءة (<bdi>WAKE_LOCK</bdi>)</td><td>منع انطفاء الشاشة أثناء الدراسة الصوتية دون استخدام اليدين</td></tr>
+          <tr><td>الوصول إلى الإنترنت</td><td>تحميل الإعلانات، وإرسال تقارير التحليلات والأعطال، وتحديث إعدادات التطبيق عن بُعد (لا يتطلب موافقة منفصلة)</td></tr>
+          <tr><td>معرّف الإعلانات المخصّصة</td><td>تحسين عرض الإعلانات — <bdi>Android</bdi>: إذن معرّف الإعلانات / <bdi>iOS</bdi>: موافقة شفافية تتبع التطبيقات (<bdi>ATT</bdi>)</td></tr>
+          <tr><td>الإشعارات</td><td>عرض تذكير الدراسة اليومي الذي حدّدته (بما في ذلك الاستعادة التلقائية بعد إعادة تشغيل الجهاز)، ويُطلب إذن الإشعارات</td></tr>
+          <tr><td>الميكروفون</td><td>التعرّف على الكلام في تمرين المحادثة (يُطلب عند استخدام الميزة)</td></tr>
+          <tr><td>تشغيل الصوت في الخلفية</td><td>يحافظ على تشغيل الصوت أثناء الدراسة دون استخدام اليدين حتى مع إطفاء الشاشة — <bdi>Android</bdi>: إذن إبقاء الشاشة مضاءة / <bdi>iOS</bdi>: وضع الصوت في الخلفية (لا يتطلب موافقة منفصلة)</td></tr>
         </tbody>
       </table>
 
