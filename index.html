@@ -165,7 +165,7 @@
       </table>
 
       <h3>3. 선택 기능: 구글 로그인 및 다기기 동기화 (Firebase Authentication · Cloud Firestore)</h3>
-      <p>설정 화면에서 구글 계정으로 로그인한 경우에만 아래 정보가 Google Firebase에 저장됩니다. 로그인하지 않으면 전송되지 않으며, 로그아웃하면 동기화가 중단됩니다.</p>
+      <p>설정 화면에서 구글 계정으로 로그인한 경우에만 아래 정보가 Google Firebase에 저장됩니다. 로그인하지 않으면 전송되지 않으며, 로그아웃하면 동기화가 중단됩니다. iOS에서는 Apple로 로그인할 수도 있으며, 이 경우 Apple이 제공하는 이메일 주소(비공개 릴레이 주소일 수 있음)와 고유 ID가 같은 목적으로 처리됩니다.</p>
       <table>
         <thead><tr><th>항목</th><th>용도</th><th>저장 위치</th></tr></thead>
         <tbody>
@@ -232,7 +232,7 @@
       <ul>
         <li><strong>기기 내 데이터:</strong> 앱을 삭제하면 모든 학습 기록과 설정이 즉시 영구 삭제됩니다.</li>
         <li><strong>AdMob/Firebase 데이터:</strong> Google의 데이터 보관 정책에 따라 처리·보관됩니다.</li>
-        <li><strong>클라우드 동기화 데이터:</strong> 구글 로그인을 사용한 경우 계정을 삭제할 때까지 Google Firebase에 보관되며, 삭제를 요청하시면 계정과 동기화 데이터 전부를 삭제합니다. 삭제 방법: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>클라우드 동기화 데이터:</strong> 구글 로그인을 사용한 경우 계정을 삭제할 때까지 Google Firebase에 보관되며, 삭제를 요청하시면 계정과 동기화 데이터 전부를 삭제합니다. 삭제 방법: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> 앱의 설정 → "계정 및 클라우드 데이터 삭제"에서 직접 삭제할 수도 있습니다(클라우드 데이터와 계정이 즉시 영구 삭제되며, Apple 로그인의 경우 Apple 토큰도 해지됩니다).</li>
       </ul>
 
       <h2>제7조 (아동의 개인정보 보호)</h2>
@@ -295,7 +295,7 @@
       </table>
 
       <h3>1.3 Optional Feature: Google Sign-In &amp; Multi-Device Sync (Firebase Authentication · Cloud Firestore)</h3>
-      <p>The information below is stored in Google Firebase only if you sign in with your Google account in Settings. If you do not sign in, nothing is transmitted; signing out stops syncing.</p>
+      <p>The information below is stored in Google Firebase only if you sign in with your Google account in Settings. If you do not sign in, nothing is transmitted; signing out stops syncing. On iOS you can also sign in with Apple; in that case the email address provided by Apple (which may be a private relay address) and a unique ID are processed for the same purposes.</p>
       <table>
         <thead><tr><th>Data Type</th><th>Purpose</th><th>Storage</th></tr></thead>
         <tbody>
@@ -362,7 +362,7 @@
       <ul>
         <li><strong>On-device data:</strong> Uninstalling the app immediately and permanently deletes all learning data and settings.</li>
         <li><strong>AdMob/Firebase data:</strong> Processed and retained according to Google's data retention policies.</li>
-        <li><strong>Cloud sync data:</strong> If you use Google sign-in, your data is kept in Google Firebase until you delete your account; on request we delete the account and all synced data. How to request deletion: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>Cloud sync data:</strong> If you use Google sign-in, your data is kept in Google Firebase until you delete your account; on request we delete the account and all synced data. How to request deletion: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> You can also delete it yourself in the app under Settings → “Delete account & cloud data” (your cloud data and account are permanently deleted immediately, and for Sign in with Apple the Apple token is revoked).</li>
       </ul>
 
       <h2>7. Children's Privacy</h2>
@@ -420,7 +420,7 @@
       </table>
 
       <h3>3. 任意機能: Googleログインとマルチデバイス同期(Firebase Authentication・Cloud Firestore)</h3>
-      <p>設定画面でGoogleアカウントにログインした場合に限り、以下の情報が Google Firebase に保存されます。ログインしなければ送信されず、ログアウトすると同期は停止します。</p>
+      <p>設定画面でGoogleアカウントにログインした場合に限り、以下の情報が Google Firebase に保存されます。ログインしなければ送信されず、ログアウトすると同期は停止します。 iOSではAppleでサインインすることもでき、その場合はAppleが提供するメールアドレス(プライベートリレーアドレスの場合があります)と固有IDが同じ目的で処理されます。</p>
       <table>
         <thead><tr><th>項目</th><th>用途</th><th>保存場所</th></tr></thead>
         <tbody>
@@ -487,7 +487,7 @@
       <ul>
         <li><strong>端末内データ:</strong> アプリをアンインストールすると、すべての学習データと設定が即座に永久削除されます。</li>
         <li><strong>AdMob/Firebaseデータ:</strong> Googleのデータ保管ポリシーに従って処理・保管されます。</li>
-        <li><strong>クラウド同期データ:</strong> Googleログインをご利用の場合、アカウントを削除するまで Google Firebase に保管され、ご要望に応じてアカウントと同期データをすべて削除します。削除方法: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>クラウド同期データ:</strong> Googleログインをご利用の場合、アカウントを削除するまで Google Firebase に保管され、ご要望に応じてアカウントと同期データをすべて削除します。削除方法: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> アプリの「設定」→「アカウントとクラウドデータを削除」から自分で削除することもできます(クラウドデータとアカウントは直ちに完全に削除され、Appleでサインインした場合はAppleのトークンも取り消されます)。</li>
       </ul>
 
       <h2>第7条 (児童のプライバシー保護)</h2>
@@ -545,7 +545,7 @@
       </table>
 
       <h3>3. 可选功能: Google 登录与多设备同步(Firebase Authentication · Cloud Firestore)</h3>
-      <p>仅当您在设置中使用 Google 账号登录时,以下信息才会保存到 Google Firebase。未登录则不会传输;退出登录后同步即停止。</p>
+      <p>仅当您在设置中使用 Google 账号登录时,以下信息才会保存到 Google Firebase。未登录则不会传输;退出登录后同步即停止。 在 iOS 上也可以使用 Apple 登录，此时由 Apple 提供的电子邮件地址（可能是隐私中继地址）和唯一 ID 将用于相同目的。</p>
       <table>
         <thead><tr><th>项目</th><th>用途</th><th>存储位置</th></tr></thead>
         <tbody>
@@ -612,7 +612,7 @@
       <ul>
         <li><strong>设备内数据:</strong> 卸载应用将立即永久删除所有学习数据和设置。</li>
         <li><strong>AdMob/Firebase 数据:</strong> 按照 Google 的数据保留政策进行处理和保留。</li>
-        <li><strong>云同步数据:</strong> 如果您使用 Google 登录,数据将保存在 Google Firebase 中,直至您删除账号;应您的请求,我们会删除账号及全部同步数据。删除方法: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>云同步数据:</strong> 如果您使用 Google 登录,数据将保存在 Google Firebase 中,直至您删除账号;应您的请求,我们会删除账号及全部同步数据。删除方法: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> 您也可以在应用的“设置 → 删除账号及云端数据”中自行删除（云端数据和账号将立即被永久删除；使用 Apple 登录时还会撤销 Apple 令牌）。</li>
       </ul>
 
       <h2>第7条 (儿童隐私保护)</h2>
@@ -670,7 +670,7 @@
       </table>
 
       <h3>3. 選用功能: Google 登入與多裝置同步(Firebase Authentication · Cloud Firestore)</h3>
-      <p>僅當您在設定中使用 Google 帳號登入時,以下資訊才會儲存到 Google Firebase。未登入則不會傳輸;登出後同步即停止。</p>
+      <p>僅當您在設定中使用 Google 帳號登入時,以下資訊才會儲存到 Google Firebase。未登入則不會傳輸;登出後同步即停止。 在 iOS 上也可以使用 Apple 登入，此時由 Apple 提供的電子郵件地址（可能是隱私中繼地址）和唯一 ID 將用於相同目的。</p>
       <table>
         <thead><tr><th>項目</th><th>用途</th><th>儲存位置</th></tr></thead>
         <tbody>
@@ -737,7 +737,7 @@
       <ul>
         <li><strong>裝置內資料:</strong> 解除安裝應用將立即永久刪除所有學習資料與設定。</li>
         <li><strong>AdMob/Firebase 資料:</strong> 依照 Google 的資料保留政策進行處理與保留。</li>
-        <li><strong>雲端同步資料:</strong> 若您使用 Google 登入,資料將保存在 Google Firebase 中,直到您刪除帳號;經您請求,我們會刪除帳號及全部同步資料。刪除方式: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>雲端同步資料:</strong> 若您使用 Google 登入,資料將保存在 Google Firebase 中,直到您刪除帳號;經您請求,我們會刪除帳號及全部同步資料。刪除方式: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> 您也可以在應用程式的「設定 → 刪除帳號及雲端資料」中自行刪除（雲端資料和帳號將立即被永久刪除；使用 Apple 登入時還會撤銷 Apple 權杖）。</li>
       </ul>
 
       <h2>第7條 (兒童隱私保護)</h2>
@@ -795,7 +795,7 @@
       </table>
 
       <h3>3. Tính năng tùy chọn: Đăng nhập Google và đồng bộ đa thiết bị (Firebase Authentication · Cloud Firestore)</h3>
-      <p>Chỉ khi bạn đăng nhập bằng tài khoản Google trong phần Cài đặt, các thông tin dưới đây mới được lưu vào Google Firebase. Nếu không đăng nhập, không có gì được gửi đi; đăng xuất sẽ dừng đồng bộ.</p>
+      <p>Chỉ khi bạn đăng nhập bằng tài khoản Google trong phần Cài đặt, các thông tin dưới đây mới được lưu vào Google Firebase. Nếu không đăng nhập, không có gì được gửi đi; đăng xuất sẽ dừng đồng bộ. Trên iOS, bạn cũng có thể đăng nhập bằng Apple; khi đó địa chỉ email do Apple cung cấp (có thể là địa chỉ chuyển tiếp riêng tư) và ID duy nhất được xử lý cho cùng các mục đích.</p>
       <table>
         <thead><tr><th>Mục</th><th>Mục đích</th><th>Nơi lưu trữ</th></tr></thead>
         <tbody>
@@ -862,7 +862,7 @@
       <ul>
         <li><strong>Dữ liệu trên thiết bị:</strong> Gỡ cài đặt ứng dụng sẽ xóa ngay lập tức và vĩnh viễn toàn bộ dữ liệu học tập và cài đặt.</li>
         <li><strong>Dữ liệu AdMob/Firebase:</strong> Được xử lý và lưu giữ theo chính sách lưu giữ dữ liệu của Google.</li>
-        <li><strong>Dữ liệu đồng bộ đám mây:</strong> Nếu bạn dùng đăng nhập Google, dữ liệu được lưu trong Google Firebase cho đến khi bạn xóa tài khoản; theo yêu cầu, chúng tôi xóa tài khoản và toàn bộ dữ liệu đã đồng bộ. Cách yêu cầu xóa: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>Dữ liệu đồng bộ đám mây:</strong> Nếu bạn dùng đăng nhập Google, dữ liệu được lưu trong Google Firebase cho đến khi bạn xóa tài khoản; theo yêu cầu, chúng tôi xóa tài khoản và toàn bộ dữ liệu đã đồng bộ. Cách yêu cầu xóa: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> Bạn cũng có thể tự xóa trong ứng dụng tại Cài đặt → “Xóa tài khoản và dữ liệu đám mây” (dữ liệu đám mây và tài khoản bị xóa vĩnh viễn ngay lập tức; với Đăng nhập bằng Apple, mã thông báo Apple cũng bị thu hồi).</li>
       </ul>
 
       <h2>7. Quyền riêng tư của trẻ em</h2>
@@ -920,7 +920,7 @@
       </table>
 
       <h3>3. ฟีเจอร์เสริม: การลงชื่อเข้าใช้ Google และการซิงค์หลายอุปกรณ์ (Firebase Authentication · Cloud Firestore)</h3>
-      <p>ข้อมูลด้านล่างจะถูกเก็บใน Google Firebase เฉพาะเมื่อคุณลงชื่อเข้าใช้ด้วยบัญชี Google ในหน้าการตั้งค่าเท่านั้น หากไม่ลงชื่อเข้าใช้ จะไม่มีการส่งข้อมูลใด ๆ และเมื่อออกจากระบบ การซิงค์จะหยุด</p>
+      <p>ข้อมูลด้านล่างจะถูกเก็บใน Google Firebase เฉพาะเมื่อคุณลงชื่อเข้าใช้ด้วยบัญชี Google ในหน้าการตั้งค่าเท่านั้น หากไม่ลงชื่อเข้าใช้ จะไม่มีการส่งข้อมูลใด ๆ และเมื่อออกจากระบบ การซิงค์จะหยุด บน iOS คุณสามารถลงชื่อเข้าใช้ด้วย Apple ได้เช่นกัน ในกรณีนี้อีเมลที่ Apple ให้มา (อาจเป็นที่อยู่อีเมลรีเลย์ส่วนตัว) และรหัสเฉพาะจะถูกประมวลผลเพื่อวัตถุประสงค์เดียวกัน</p>
       <table>
         <thead><tr><th>รายการ</th><th>วัตถุประสงค์</th><th>สถานที่จัดเก็บ</th></tr></thead>
         <tbody>
@@ -987,7 +987,7 @@
       <ul>
         <li><strong>ข้อมูลในเครื่อง:</strong> การถอนการติดตั้งแอปจะลบข้อมูลการเรียนและการตั้งค่าทั้งหมดทันทีและถาวร</li>
         <li><strong>ข้อมูล AdMob/Firebase:</strong> ประมวลผลและเก็บรักษาตามนโยบายการเก็บรักษาข้อมูลของ Google</li>
-        <li><strong>ข้อมูลซิงค์บนคลาวด์:</strong> หากคุณใช้การลงชื่อเข้าใช้ Google ข้อมูลจะถูกเก็บไว้ใน Google Firebase จนกว่าคุณจะลบบัญชี และเมื่อมีคำขอ เราจะลบบัญชีและข้อมูลที่ซิงค์ทั้งหมด วิธีขอลบ: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>ข้อมูลซิงค์บนคลาวด์:</strong> หากคุณใช้การลงชื่อเข้าใช้ Google ข้อมูลจะถูกเก็บไว้ใน Google Firebase จนกว่าคุณจะลบบัญชี และเมื่อมีคำขอ เราจะลบบัญชีและข้อมูลที่ซิงค์ทั้งหมด วิธีขอลบ: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> คุณยังลบเองได้ในแอปที่ การตั้งค่า → “ลบบัญชีและข้อมูลบนคลาวด์” (ข้อมูลบนคลาวด์และบัญชีจะถูกลบถาวรทันที และหากใช้ Sign in with Apple โทเค็นของ Apple จะถูกเพิกถอนด้วย)</li>
       </ul>
 
       <h2>7. ความเป็นส่วนตัวของเด็ก</h2>
@@ -1045,7 +1045,7 @@
       </table>
 
       <h3>1.3 Fitur Opsional: Masuk dengan Google &amp; Sinkronisasi Multi-Perangkat (Firebase Authentication · Cloud Firestore)</h3>
-      <p>Informasi di bawah ini disimpan di Google Firebase hanya jika Anda masuk dengan akun Google di Pengaturan. Jika tidak masuk, tidak ada yang dikirim; keluar akan menghentikan sinkronisasi.</p>
+      <p>Informasi di bawah ini disimpan di Google Firebase hanya jika Anda masuk dengan akun Google di Pengaturan. Jika tidak masuk, tidak ada yang dikirim; keluar akan menghentikan sinkronisasi. Di iOS Anda juga dapat masuk dengan Apple; dalam hal ini alamat email yang diberikan Apple (bisa berupa alamat relai pribadi) dan ID unik diproses untuk tujuan yang sama.</p>
       <table>
         <thead><tr><th>Jenis Data</th><th>Tujuan</th><th>Penyimpanan</th></tr></thead>
         <tbody>
@@ -1112,7 +1112,7 @@
       <ul>
         <li><strong>Data di perangkat:</strong> Menghapus instalasi aplikasi akan langsung dan secara permanen menghapus semua data pembelajaran dan pengaturan.</li>
         <li><strong>Data AdMob/Firebase:</strong> Diproses dan disimpan sesuai dengan kebijakan penyimpanan data Google.</li>
-        <li><strong>Data sinkronisasi cloud:</strong> Jika Anda menggunakan masuk dengan Google, data Anda disimpan di Google Firebase hingga Anda menghapus akun; atas permintaan, kami menghapus akun dan seluruh data yang disinkronkan. Cara meminta penghapusan: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>Data sinkronisasi cloud:</strong> Jika Anda menggunakan masuk dengan Google, data Anda disimpan di Google Firebase hingga Anda menghapus akun; atas permintaan, kami menghapus akun dan seluruh data yang disinkronkan. Cara meminta penghapusan: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> Anda juga dapat menghapusnya sendiri di aplikasi melalui Pengaturan → “Hapus akun & data cloud” (data cloud dan akun langsung dihapus permanen, dan untuk Masuk dengan Apple, token Apple dicabut).</li>
       </ul>
 
       <h2>7. Privasi Anak</h2>
@@ -1170,7 +1170,7 @@
       </table>
 
       <h3>1.3 Función opcional: inicio de sesión con Google y sincronización multidispositivo (Firebase Authentication · Cloud Firestore)</h3>
-      <p>La información siguiente se almacena en Google Firebase únicamente si inicia sesión con su cuenta de Google en Ajustes. Si no inicia sesión, no se transmite nada; al cerrar sesión se detiene la sincronización.</p>
+      <p>La información siguiente se almacena en Google Firebase únicamente si inicia sesión con su cuenta de Google en Ajustes. Si no inicia sesión, no se transmite nada; al cerrar sesión se detiene la sincronización. En iOS también puedes iniciar sesión con Apple; en ese caso, el correo electrónico que proporciona Apple (que puede ser una dirección de retransmisión privada) y un ID único se tratan con los mismos fines.</p>
       <table>
         <thead><tr><th>Tipo de datos</th><th>Finalidad</th><th>Almacenamiento</th></tr></thead>
         <tbody>
@@ -1237,7 +1237,7 @@
       <ul>
         <li><strong>Datos en el dispositivo:</strong> Desinstalar la aplicación elimina de forma inmediata y permanente todos los datos de aprendizaje y la configuración.</li>
         <li><strong>Datos de AdMob/Firebase:</strong> Se procesan y conservan de acuerdo con las políticas de conservación de datos de Google.</li>
-        <li><strong>Datos de sincronización en la nube:</strong> Si usa el inicio de sesión con Google, sus datos se conservan en Google Firebase hasta que elimine su cuenta; previa solicitud, eliminamos la cuenta y todos los datos sincronizados. Cómo solicitar la eliminación: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>Datos de sincronización en la nube:</strong> Si usa el inicio de sesión con Google, sus datos se conservan en Google Firebase hasta que elimine su cuenta; previa solicitud, eliminamos la cuenta y todos los datos sincronizados. Cómo solicitar la eliminación: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> También puedes eliminarlos tú mismo en la app, en Ajustes → «Eliminar cuenta y datos en la nube» (los datos en la nube y la cuenta se eliminan de forma permanente e inmediata y, con Iniciar sesión con Apple, se revoca el token de Apple).</li>
       </ul>
 
       <h2>7. Privacidad de los Menores</h2>
@@ -1295,7 +1295,7 @@
       </table>
 
       <h3>1.3 Ciri Pilihan: Log Masuk Google &amp; Penyegerakan Berbilang Peranti (Firebase Authentication · Cloud Firestore)</h3>
-      <p>Maklumat di bawah hanya disimpan dalam Google Firebase jika anda log masuk dengan akaun Google dalam Tetapan. Jika tidak log masuk, tiada apa-apa dihantar; log keluar menghentikan penyegerakan.</p>
+      <p>Maklumat di bawah hanya disimpan dalam Google Firebase jika anda log masuk dengan akaun Google dalam Tetapan. Jika tidak log masuk, tiada apa-apa dihantar; log keluar menghentikan penyegerakan. Di iOS anda juga boleh log masuk dengan Apple; dalam kes ini alamat e-mel yang diberikan oleh Apple (mungkin alamat geganti peribadi) dan ID unik diproses untuk tujuan yang sama.</p>
       <table>
         <thead><tr><th>Jenis Data</th><th>Tujuan</th><th>Storan</th></tr></thead>
         <tbody>
@@ -1362,7 +1362,7 @@
       <ul>
         <li><strong>Data pada peranti:</strong> Menyahpasang aplikasi akan memadam semua data pembelajaran dan tetapan dengan serta-merta dan secara kekal.</li>
         <li><strong>Data AdMob/Firebase:</strong> Diproses dan dikekalkan mengikut dasar pengekalan data Google.</li>
-        <li><strong>Data penyegerakan awan:</strong> Jika anda menggunakan log masuk Google, data anda disimpan dalam Google Firebase sehingga anda memadam akaun; atas permintaan, kami memadam akaun dan semua data yang disegerakkan. Cara memohon pemadaman: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>Data penyegerakan awan:</strong> Jika anda menggunakan log masuk Google, data anda disimpan dalam Google Firebase sehingga anda memadam akaun; atas permintaan, kami memadam akaun dan semua data yang disegerakkan. Cara memohon pemadaman: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> Anda juga boleh memadamnya sendiri dalam apl di Tetapan → “Padam akaun & data awan” (data awan dan akaun dipadam secara kekal serta-merta, dan untuk Log Masuk dengan Apple, token Apple dibatalkan).</li>
       </ul>
 
       <h2>7. Privasi Kanak-Kanak</h2>
@@ -1420,7 +1420,7 @@
       </table>
 
       <h3>1.3 Recurso opcional: login com Google e sincronização entre dispositivos (Firebase Authentication · Cloud Firestore)</h3>
-      <p>As informações abaixo são armazenadas no Google Firebase somente se você entrar com sua conta Google nas Configurações. Se você não entrar, nada é transmitido; sair interrompe a sincronização.</p>
+      <p>As informações abaixo são armazenadas no Google Firebase somente se você entrar com sua conta Google nas Configurações. Se você não entrar, nada é transmitido; sair interrompe a sincronização. No iOS você também pode entrar com a Apple; nesse caso, o e-mail fornecido pela Apple (que pode ser um endereço de retransmissão privado) e um ID exclusivo são tratados para as mesmas finalidades.</p>
       <table>
         <thead><tr><th>Tipo de dados</th><th>Finalidade</th><th>Armazenamento</th></tr></thead>
         <tbody>
@@ -1487,7 +1487,7 @@
       <ul>
         <li><strong>Dados no dispositivo:</strong> Desinstalar o aplicativo exclui imediata e permanentemente todos os dados de aprendizado e configurações.</li>
         <li><strong>Dados do AdMob/Firebase:</strong> Processados e retidos de acordo com as políticas de retenção de dados do Google.</li>
-        <li><strong>Dados de sincronização na nuvem:</strong> Se você usar o login com Google, seus dados são mantidos no Google Firebase até que você exclua sua conta; mediante solicitação, excluímos a conta e todos os dados sincronizados. Como solicitar a exclusão: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>Dados de sincronização na nuvem:</strong> Se você usar o login com Google, seus dados são mantidos no Google Firebase até que você exclua sua conta; mediante solicitação, excluímos a conta e todos os dados sincronizados. Como solicitar a exclusão: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> Você também pode excluir por conta própria no app, em Configurações → “Excluir conta e dados na nuvem” (os dados na nuvem e a conta são excluídos permanentemente de imediato e, no caso de Entrar com a Apple, o token da Apple é revogado).</li>
       </ul>
 
       <h2>7. Privacidade das Crianças</h2>
@@ -1545,7 +1545,7 @@
       </table>
 
       <h3>1.3 Optionale Funktion: Google-Anmeldung &amp; Synchronisierung über mehrere Geräte (Firebase Authentication · Cloud Firestore)</h3>
-      <p>Die folgenden Informationen werden nur dann in Google Firebase gespeichert, wenn Sie sich in den Einstellungen mit Ihrem Google-Konto anmelden. Ohne Anmeldung wird nichts übertragen; durch Abmelden endet die Synchronisierung.</p>
+      <p>Die folgenden Informationen werden nur dann in Google Firebase gespeichert, wenn Sie sich in den Einstellungen mit Ihrem Google-Konto anmelden. Ohne Anmeldung wird nichts übertragen; durch Abmelden endet die Synchronisierung. Unter iOS kannst du dich auch mit Apple anmelden; dann werden die von Apple bereitgestellte E-Mail-Adresse (ggf. eine private Relay-Adresse) und eine eindeutige ID zu denselben Zwecken verarbeitet.</p>
       <table>
         <thead><tr><th>Datenart</th><th>Zweck</th><th>Speicherort</th></tr></thead>
         <tbody>
@@ -1612,7 +1612,7 @@
       <ul>
         <li><strong>Daten auf dem Gerät:</strong> Durch die Deinstallation der App werden alle Lerndaten und Einstellungen sofort und dauerhaft gelöscht.</li>
         <li><strong>AdMob-/Firebase-Daten:</strong> Werden gemäß den Datenaufbewahrungsrichtlinien von Google verarbeitet und aufbewahrt.</li>
-        <li><strong>Cloud-Synchronisierungsdaten:</strong> Wenn Sie die Google-Anmeldung nutzen, werden Ihre Daten in Google Firebase gespeichert, bis Sie Ihr Konto löschen; auf Anfrage löschen wir das Konto und alle synchronisierten Daten. So beantragen Sie die Löschung: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>Cloud-Synchronisierungsdaten:</strong> Wenn Sie die Google-Anmeldung nutzen, werden Ihre Daten in Google Firebase gespeichert, bis Sie Ihr Konto löschen; auf Anfrage löschen wir das Konto und alle synchronisierten Daten. So beantragen Sie die Löschung: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> Du kannst sie auch selbst in der App unter Einstellungen → „Konto & Cloud-Daten löschen“ löschen (Cloud-Daten und Konto werden sofort dauerhaft gelöscht; bei „Mit Apple anmelden“ wird auch das Apple-Token widerrufen).</li>
       </ul>
 
       <h2>7. Datenschutz für Kinder</h2>
@@ -1670,7 +1670,7 @@
       </table>
 
       <h3>1.3 Fonction facultative : connexion Google et synchronisation multi-appareils (Firebase Authentication · Cloud Firestore)</h3>
-      <p>Les informations ci-dessous ne sont stockées dans Google Firebase que si vous vous connectez avec votre compte Google dans les Paramètres. Sans connexion, rien n'est transmis ; la déconnexion arrête la synchronisation.</p>
+      <p>Les informations ci-dessous ne sont stockées dans Google Firebase que si vous vous connectez avec votre compte Google dans les Paramètres. Sans connexion, rien n'est transmis ; la déconnexion arrête la synchronisation. Sur iOS, vous pouvez aussi vous connecter avec Apple ; dans ce cas, l'adresse e-mail fournie par Apple (éventuellement une adresse de relais privée) et un identifiant unique sont traités aux mêmes fins.</p>
       <table>
         <thead><tr><th>Type de données</th><th>Finalité</th><th>Stockage</th></tr></thead>
         <tbody>
@@ -1737,7 +1737,7 @@
       <ul>
         <li><strong>Données sur l'appareil :</strong> La désinstallation de l'application supprime immédiatement et définitivement toutes les données d'apprentissage et les réglages.</li>
         <li><strong>Données AdMob/Firebase :</strong> Traitées et conservées conformément aux politiques de conservation des données de Google.</li>
-        <li><strong>Données de synchronisation cloud :</strong> Si vous utilisez la connexion Google, vos données sont conservées dans Google Firebase jusqu'à la suppression de votre compte ; sur demande, nous supprimons le compte et toutes les données synchronisées. Comment demander la suppression : <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>Données de synchronisation cloud :</strong> Si vous utilisez la connexion Google, vos données sont conservées dans Google Firebase jusqu'à la suppression de votre compte ; sur demande, nous supprimons le compte et toutes les données synchronisées. Comment demander la suppression : <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> Vous pouvez aussi les supprimer vous-même dans l'app, via Réglages → « Supprimer le compte et les données cloud » (les données cloud et le compte sont supprimés immédiatement et définitivement ; avec Se connecter avec Apple, le jeton Apple est également révoqué).</li>
       </ul>
 
       <h2>7. Confidentialité des enfants</h2>
@@ -1795,7 +1795,7 @@
       </table>
 
       <h3>1.3 Необязательная функция: вход через Google и синхронизация между устройствами (Firebase Authentication · Cloud Firestore)</h3>
-      <p>Приведённая ниже информация сохраняется в Google Firebase только в том случае, если вы входите в аккаунт Google в настройках. Если вы не входите, ничего не передаётся; при выходе синхронизация прекращается.</p>
+      <p>Приведённая ниже информация сохраняется в Google Firebase только в том случае, если вы входите в аккаунт Google в настройках. Если вы не входите, ничего не передаётся; при выходе синхронизация прекращается. На iOS также можно войти через Apple; в этом случае адрес электронной почты, предоставленный Apple (возможно, приватный адрес-ретранслятор), и уникальный идентификатор обрабатываются для тех же целей.</p>
       <table>
         <thead><tr><th>Тип данных</th><th>Назначение</th><th>Хранение</th></tr></thead>
         <tbody>
@@ -1862,7 +1862,7 @@
       <ul>
         <li><strong>Данные на устройстве:</strong> удаление приложения немедленно и безвозвратно стирает все данные об обучении и настройки.</li>
         <li><strong>Данные AdMob/Firebase:</strong> обрабатываются и хранятся в соответствии с политиками хранения данных Google.</li>
-        <li><strong>Данные облачной синхронизации:</strong> Если вы используете вход через Google, ваши данные хранятся в Google Firebase до удаления аккаунта; по запросу мы удаляем аккаунт и все синхронизированные данные. Как запросить удаление: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>Данные облачной синхронизации:</strong> Если вы используете вход через Google, ваши данные хранятся в Google Firebase до удаления аккаунта; по запросу мы удаляем аккаунт и все синхронизированные данные. Как запросить удаление: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> Вы также можете удалить их самостоятельно в приложении: Настройки → «Удалить аккаунт и облачные данные» (облачные данные и аккаунт удаляются немедленно и безвозвратно; при входе через Apple токен Apple также отзывается).</li>
       </ul>
 
       <h2>7. Конфиденциальность детей</h2>
@@ -1920,7 +1920,7 @@
       </table>
 
       <h3>1.3 ميزة اختيارية: تسجيل الدخول بحساب Google والمزامنة بين الأجهزة (Firebase Authentication · Cloud Firestore)</h3>
-      <p>تُخزَّن المعلومات أدناه في Google Firebase فقط إذا سجّلت الدخول بحساب Google من الإعدادات. إذا لم تسجّل الدخول فلن يتم إرسال شيء، وتسجيل الخروج يوقف المزامنة.</p>
+      <p>تُخزَّن المعلومات أدناه في Google Firebase فقط إذا سجّلت الدخول بحساب Google من الإعدادات. إذا لم تسجّل الدخول فلن يتم إرسال شيء، وتسجيل الخروج يوقف المزامنة. على iOS يمكنك أيضًا تسجيل الدخول باستخدام Apple؛ وفي هذه الحالة تتم معالجة عنوان البريد الإلكتروني الذي توفره Apple (وقد يكون عنوان ترحيل خاصًا) ومعرّف فريد للأغراض نفسها.</p>
       <table>
         <thead><tr><th>نوع البيانات</th><th>الغرض</th><th>موقع التخزين</th></tr></thead>
         <tbody>
@@ -1987,7 +1987,7 @@
       <ul>
         <li><strong>البيانات على الجهاز:</strong> يؤدي إلغاء تثبيت التطبيق إلى حذف جميع بيانات التعلّم والإعدادات فورًا وبشكل دائم.</li>
         <li><strong>بيانات AdMob/Firebase:</strong> تتم معالجتها والاحتفاظ بها وفقًا لسياسات الاحتفاظ بالبيانات لدى Google.</li>
-        <li><strong>بيانات المزامنة السحابية:</strong> إذا استخدمت تسجيل الدخول بحساب Google، فتُحفظ بياناتك في Google Firebase حتى تحذف حسابك؛ وبناءً على طلبك نحذف الحساب وجميع البيانات المتزامنة. طريقة طلب الحذف: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a></li>
+        <li><strong>بيانات المزامنة السحابية:</strong> إذا استخدمت تسجيل الدخول بحساب Google، فتُحفظ بياناتك في Google Firebase حتى تحذف حسابك؛ وبناءً على طلبك نحذف الحساب وجميع البيانات المتزامنة. طريقة طلب الحذف: <a href="https://heyday07.github.io/topik-delete-account.html" target="_blank">heyday07.github.io/topik-delete-account.html</a> يمكنك أيضًا حذفها بنفسك من داخل التطبيق: الإعدادات ← «حذف الحساب وبيانات السحابة» (تُحذف بيانات السحابة والحساب نهائيًا على الفور، وعند استخدام تسجيل الدخول عبر Apple يتم أيضًا إلغاء رمز Apple).</li>
       </ul>
 
       <h2>7. خصوصية الأطفال</h2>
